@@ -1,0 +1,1 @@
+Ao remover item do carrinho o programa apaga apenas os dados da row!
