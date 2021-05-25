@@ -30,3 +30,8 @@ function send_email() {
     "&body=" + ("Mensagem: " + msgbody + "\n\n\n");
     window.location.href = link;
 }
+
+function PopUp_Frases() {
+    var popup = document.getElementById("PopUpFrases");
+    popup.classList.toggle("show");
+  }

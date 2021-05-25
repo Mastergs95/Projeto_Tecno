@@ -12,13 +12,12 @@
 <body>
 	
 	<div class="container1">
-		
 	</div>
 
 	<div class="top_bar">
 		<img src="logo.png" alt="Doringo" style="float:left;width:90px;height:80px;">
-		<a href="index.html"><i class="fas fa-home"></i> </a>
-		<a class="active" href="contact.html"><i class="fas fa-paper-plane"></i> </a>
+		<a href="index.html"><i class="far fa-lightbulb"></i> </a>
+		<a class="active" href="contact.html"><i class="fas fa-bug"></i> </a>
 		<a href="about.html"><i class="fas fa-info-circle"></i> </a>
 		<a style="float:right;"><i class="fas fa-star"></i> </a>
 	</div> 
@@ -34,11 +33,11 @@
 	<label type="description"]>Descrição:</label>
 	
     <div class="main">
-        <a>Comunicar um problema.</a>
+		<a>Comunicar um problema.</a>
 		
 			<input type="email" disabled="disabled" placeholder="doringooficial@hotmail.com" name="doringoemail">
 			
-			<select id="option_selected" name="Problema" id="category">
+			<select class="" name="Problema">
 				<optgroup label="Problemas com a minha conta">
 					<option value="1">Não consigo iniciar sessão na minha conta.</option>
 					<option value="2">Não consigo finalizar sessao na minha conta.</option>
@@ -54,9 +53,9 @@
 				</optgroup>
 			</select>
 		
-            <input type="description" placeholder="Descreva o problema detalhadamente." id="Message"> 
-            <input type="submit" onclick="send_email()" value="Enviar">
-    </div>
+			<input type="description" placeholder="Descreva o problema detalhadamente." id="Message"> 
+			<input type="submit" onclick="send_email()" value="Enviar">
+	</div>
 	
 	<div class="rodape">
 		<footer>

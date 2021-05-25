@@ -1,22 +1,54 @@
 <html>
 	
 <head>
-    <title>Doringo | Home</title>
+    <title>Doringo | Sugestões</title>
     <link rel="stylesheet" href="style.css">
 	<link rel="shortcut icon" type="image/x-icon" href="logo.ico">
 	<script src="javascript.js"></script>
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+	
 </head>
 
 <body>
 	
+	<div class="container1">
+	</div>
+
+
 	<div class="top_bar">
 		<img src="logo.png" alt="Doringo" style="float:left;width:90px;height:80px;">
-		<a class="active" href="index.html"><i class="fas fa-home"></i> </a>
-		<a href="contact.html"><i class="fas fa-paper-plane"></i> </a>
+		<a class="active" href="index.html"><i class="far fa-lightbulb"></i> </a>
+		<a href="contact.html"><i class="fas fa-bug"></i> </a>
 		<a href="about.html"><i class="fas fa-info-circle"></i> </a>
 		<a style="float:right;"><i class="fas fa-star"></i> </a>
+	</div>
 
+
+
+	<!--<div class="rodapee">
+		<footer>
+			<p>Copyright © Doringo. All rights reserved<br>
+		</footer>
+	</div>-->
+
+	
+	<label type="receiver">Para:</label> <br>
+	<label type="category"]>Sugestão:</label> <br>
+	<label type="description"]>Descrição:</label>
+
+	<div class="main">
+			<a>Enviar Sugestão.</a>
+	
+			<input type="email" disabled="disabled" placeholder="doringooficial@hotmail.com" name="doringoemail">
+		
+			<select id="suggestion_selected" name="Sugestao" id="category">
+				<optgroup label="Sugestões.">
+					<option value="1">Tenho uma sugestão para o programa.</option>
+				</optgroup>
+			</select>
+	
+			<input type="description" placeholder="Descreva a sua sugestão detalhadamente." id="Message"> 
+			<input type="submit" onclick="send_email()" value="Enviar">
 	</div>
 
 
