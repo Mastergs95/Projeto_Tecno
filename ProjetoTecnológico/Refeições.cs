@@ -11,6 +11,7 @@ using BusinessLogicLayer;
 using System.Security.Cryptography;
 using System.IO;
 using System.Drawing.Drawing2D;
+using System.Threading;
 
 namespace ProjetoTecnológico
 {
@@ -78,6 +79,7 @@ namespace ProjetoTecnológico
         }
         private void Refeições_Load(object sender, EventArgs e)
         {
+            
             guna2DataGridView1.Rows.Clear();
             guna2DataGridView1.Rows.Add(15);
             
@@ -335,15 +337,30 @@ namespace ProjetoTecnológico
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (panel2.Visible == false)
+
+            if (String.IsNullOrEmpty((string)guna2DataGridView1.Rows[0].Cells[0].Value))
             {
-                panel2.Visible = true;
+                label2.Visible=true;
+                panel2.Visible = false;
+               
+
+
             }
             else
             {
-                panel2.Visible = false ;
+                label2.Visible = false;
+                if (panel2.Visible == false)
+                {
+                    panel2.Visible = true;
+                }
+                else
+                {
+                    panel2.Visible = false;
+                }
             }
-            
+
+          
+           
 
         }
 
@@ -354,7 +371,7 @@ namespace ProjetoTecnológico
       
         private void button3_Click(object sender, EventArgs e)
         {
-           
+            pictureBox2.Enabled = true;
             
            
             
@@ -367,7 +384,7 @@ namespace ProjetoTecnológico
                 guna2DataGridView1.Rows[j].Cells[1].Value = metroLabel1.Text;
                 guna2DataGridView1.Rows[j].Cells[2].Value = preco;
                 guna2DataGridView1.Rows[j].Cells[3].Value = pictureBox6.Image;
-                guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
+               // guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
                 j += 1;
 
             } while (j> 10);
@@ -438,11 +455,20 @@ namespace ProjetoTecnológico
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4) 
+            try
             {
-                guna2DataGridView1.Rows.RemoveAt(e.RowIndex);
-
+                if (e.ColumnIndex == 4 & String.IsNullOrEmpty((string)guna2DataGridView1.Rows[j].Cells[0].Value))
+                {
+                   MessageBox.Show("teste");
+                }
+                else if(e.ColumnIndex == 4)
+                {
+                    guna2DataGridView1.Rows.RemoveAt(e.RowIndex);
+                    j -= 1;
+                }
+               
             }
+            catch (Exception erro) { }
         }
     }
 }

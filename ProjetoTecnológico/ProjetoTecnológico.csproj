@@ -193,6 +193,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo.ico" />
+    <None Include="Resources\default.png" />
+    <None Include="Resources\icon_packs.png" />
     <None Include="Resources\icon_lixo.png" />
     <None Include="Resources\menos.png" />
     <None Include="Resources\mais.png" />
