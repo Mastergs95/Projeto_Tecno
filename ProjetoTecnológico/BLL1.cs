@@ -60,6 +60,15 @@ namespace BusinessLogicLayer
                 return dal.executarReader("select * from packs", null);
             }
 
+            static public DataTable loadPk(int id)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                new SqlParameter("@id", id),
+                };
+                return dal.executarReader("select * from packs where Id_pack=@id", sqlParams);
+            }
+
             static public DataTable loadRefs(int id)
             {
                 DAL dal = new DAL();

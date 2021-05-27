@@ -17,11 +17,16 @@ namespace ProjetoTecnológico
 {
     public partial class Refeições : MetroFramework.Forms.MetroForm
     {
+        int itens = 0;
+        int litens = 0;
+        bool vs = true;
+        bool vz = true;
         int t = 1;
         int qnt;
         byte[] ft;
         byte[] fot;
         int id;
+        //Refeiçoes
         int x = 185;
         int y = 280;
         int p = 140;
@@ -29,8 +34,18 @@ namespace ProjetoTecnológico
         int i = 1;
         int px=280;
         int py=120;
+        //packs
+        int q = 185;
+        int w = 280;
+        int a = 140;
+        int s = 120;
+        int l = 1;
+        int xq = 280;
+        int xw = 120;
+        //
         double preco;
         int j = 0;
+        int m;
         const int DRAG_HANDLE_SIZE = 7;
         public Refeições()
         {
@@ -49,7 +64,7 @@ namespace ProjetoTecnológico
 
         private void picturebox_click(object sender, EventArgs e)
         {
-            
+            panel2.Visible = false;
             id = (int)((PictureBox)sender).Tag;
             DataTable rf = BLL1.Refeicao.loadRefs(id);
 
@@ -79,91 +94,7 @@ namespace ProjetoTecnológico
         }
         private void Refeições_Load(object sender, EventArgs e)
         {
-            
-            guna2DataGridView1.Rows.Clear();
-            guna2DataGridView1.Rows.Add(15);
-            
-            //guna2DataGridView1.Rows[j].Height = 60;
-            int l = 373+74;
-            this.Controls.Add(panel5);
-            panel5.Location = new Point(500, 200);
-            panel1.AutoScroll = true;
-            panel2.Visible = false;
-            toolStripStatusLabel9.Text = Globais.user;
-            DataTable dt = BLL1.Refeicao.loadRefeições();
-            MakeLabelRounded();
-            panel4.AutoScrollMinSize = new Size(0, 1000);
-            this.Controls.Add(panel4);
-       
-            //panel6.Height = 64;
-            //panel6.Location = new Point(500, 10);
-            //this.Controls.Add(panel6);
-            //this.Controls.Add(label5);
-            //label5.Location= new Point(500, 100);
-            foreach (DataRow row in dt.Rows)
-            {
-                //picturebox
-                PictureBox picturebox = new PictureBox();
-                Rectangle myEllipse = new Rectangle(150, 150, -150, -150);
-                GraphicsPath mypath = new GraphicsPath();
-                mypath.AddEllipse(myEllipse);
-                picturebox.Region = new Region(mypath);
-                picturebox.Location = new Point(p, k);
-                picturebox.Name = "p" + i;
-                picturebox.Size = new Size(150, 150);
-                picturebox.BringToFront();
-                ft = (byte[])row["foto"];
-                picturebox.Image = byteArrayToImage(ft);
-                picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
-                picturebox.Tag= (int)row["id_refeicao"];
-                picturebox.Click += picturebox_click;
-                panel4.Controls.Add(picturebox);
-
-
-                //Border
-
-
-                //label
-                Label label = new Label();
-                label.BackColor = System.Drawing.Color.Transparent;
-                label.Location = new Point(x, y);
-                label.Name = "l" + i;
-                label.Text = row["Nome"].ToString();
-                label.Size = new Size(100, 30);
-                label.BringToFront();
-                label.Font = new Font("Century Gothic", 12);
-                panel4.Controls.Add(label);
-                this.Controls.Add(panel4);
-
-                //label Price
-                Label labell = new Label();
-                labell.BackColor = System.Drawing.Color.Transparent;
-                labell.Location = new Point(px,py);
-                labell.Name = "ls" + i;
-                labell.Text = row["Preco"].ToString()+"€";
-                labell.Size = new Size(100, 30);
-                labell.BringToFront();
-                labell.Font = new Font("Century Gothic", 12);
-                panel4.Controls.Add(labell);
-                this.Controls.Add(panel4);
-
-                x += 300;
-                p += 300;
-                px += 300;
-                if (i % 3 == 0)
-                {
-                    x = 185;
-                    y += 250;
-                    p = 140;
-                    k += 250;
-                    px = 280;
-                    py += 250;
-                    
-                }
-
-                i += 1;
-
-            }
+           
             
         }
         void TransparetBackground(Control C)
@@ -327,9 +258,17 @@ namespace ProjetoTecnológico
 
             GraphicsPath gp = new GraphicsPath();
 
-            gp.AddEllipse(0, 0, label4.Width, label4.Height);
+            gp.AddEllipse(0, 0, label3.Width, label3.Height);
 
-            label4.Region = new Region(gp);
+            label3.Region = new Region(gp);
+
+            label3.Invalidate();
+
+            GraphicsPath gl = new GraphicsPath();
+
+            gl.AddEllipse(0, 0, label4.Width, label4.Height);
+
+            label4.Region = new Region(gl);
 
             label4.Invalidate();
 
@@ -373,20 +312,34 @@ namespace ProjetoTecnológico
         {
             pictureBox2.Enabled = true;
             
+
+
+
            
-            
-           
-            
             do
             {
-
-                guna2DataGridView1.Rows[j].Cells[0].Value = Globais.prato;
+               
+                itens += 1;
+                label4.Text = Convert.ToString(itens);
+                if (j < 10)
+                {
+                    
+                    guna2DataGridView1.Rows[j].Cells[0].Value = Globais.prato;
                 guna2DataGridView1.Rows[j].Cells[1].Value = metroLabel1.Text;
                 guna2DataGridView1.Rows[j].Cells[2].Value = preco;
                 guna2DataGridView1.Rows[j].Cells[3].Value = pictureBox6.Image;
+                    
                // guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
                 j += 1;
+                   
 
+                }
+                
+                else
+                {
+                   MessageBox.Show("Carrinho Cheio!");
+                    itens = 10;
+                }
             } while (j> 10);
                 
             
@@ -410,6 +363,7 @@ namespace ProjetoTecnológico
         private void button4_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
+            metroLabel1.Text = "1";
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
@@ -457,18 +411,381 @@ namespace ProjetoTecnológico
         {
             try
             {
-                if (e.ColumnIndex == 4 & String.IsNullOrEmpty((string)guna2DataGridView1.Rows[j].Cells[0].Value))
+                if (e.ColumnIndex == 4 & String.IsNullOrWhiteSpace((string)guna2DataGridView1.Rows[0].Cells[0].Value))
                 {
                    MessageBox.Show("teste");
                 }
                 else if(e.ColumnIndex == 4)
                 {
                     guna2DataGridView1.Rows.RemoveAt(e.RowIndex);
+                    guna2DataGridView1.Rows.Add(1);
                     j -= 1;
                 }
                
             }
             catch (Exception erro) { }
+        }
+
+        private void metroTile1_Click(object sender, EventArgs e)
+        {
+            panel4.Visible=true;
+            panel8.Visible = false;
+            panel7.Visible = false;
+
+            if (vz == true)
+            {
+
+
+                guna2DataGridView1.Rows.Clear();
+                guna2DataGridView1.Rows.Add(10);
+
+                //guna2DataGridView1.Rows[j].Height = 60;
+                int l = 373 + 74;
+                this.Controls.Add(panel5);
+                panel5.Location = new Point(500, 200);
+                panel1.AutoScroll = true;
+                panel2.Visible = false;
+                toolStripStatusLabel9.Text = Globais.user;
+                DataTable dt = BLL1.Refeicao.loadRefeições();
+                MakeLabelRounded();
+                panel4.AutoScrollMinSize = new Size(0, 1000);
+                this.Controls.Add(panel4);
+
+                //panel6.Height = 64;
+                //panel6.Location = new Point(500, 10);
+                //this.Controls.Add(panel6);
+                //this.Controls.Add(label5);
+                //label5.Location= new Point(500, 100);
+                foreach (DataRow row in dt.Rows)
+                {
+                    //picturebox
+                    PictureBox picturebox = new PictureBox();
+                    Rectangle myEllipse = new Rectangle(150, 150, -150, -150);
+                    GraphicsPath mypath = new GraphicsPath();
+                    mypath.AddEllipse(myEllipse);
+                    picturebox.Region = new Region(mypath);
+                    picturebox.Location = new Point(p, k);
+                    picturebox.Name = "p" + i;
+                    picturebox.Size = new Size(150, 150);
+                    picturebox.BringToFront();
+                    ft = (byte[])row["foto"];
+                    picturebox.Image = byteArrayToImage(ft);
+                    picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picturebox.Tag = (int)row["id_refeicao"];
+                    picturebox.Click += picturebox_click;
+                    panel4.Controls.Add(picturebox);
+
+
+                    //Border
+
+
+                    //label
+                    Label label = new Label();
+                    label.BackColor = System.Drawing.Color.Transparent;
+                    label.Location = new Point(x, y);
+                    label.Name = "l" + i;
+                    label.Text = row["Nome"].ToString();
+                    label.Size = new Size(100, 30);
+                    label.BringToFront();
+                    label.Font = new Font("Century Gothic", 12);
+                    panel4.Controls.Add(label);
+                    this.Controls.Add(panel4);
+
+                    //label Price
+                    Label labell = new Label();
+                    labell.BackColor = System.Drawing.Color.Transparent;
+                    labell.Location = new Point(px, py);
+                    labell.Name = "ls" + i;
+                    labell.Text = row["Preco"].ToString() + "€";
+                    labell.Size = new Size(100, 30);
+                    labell.BringToFront();
+                    labell.Font = new Font("Century Gothic", 12);
+                    panel4.Controls.Add(labell);
+                    this.Controls.Add(panel4);
+
+                    x += 300;
+                    p += 300;
+                    px += 300;
+                    if (i % 3 == 0)
+                    {
+                        x = 185;
+                        y += 250;
+                        p = 140;
+                        k += 250;
+                        px = 280;
+                        py += 250;
+
+                    }
+
+                    i += 1;
+
+                }
+            }
+            vz = false;
+        }
+
+        private void metroTile4_Click(object sender, EventArgs e)
+        {
+            
+            panel4.Visible = false;
+            panel2.Visible = false;
+            panel7.Visible = true;
+            
+            if (vs == true)
+            {
+
+
+                guna2DataGridView2.Rows.Clear();
+                guna2DataGridView2.Rows.Add(10);
+
+                //guna2DataGridView1.Rows[j].Height = 60;
+                int l = 373 + 74;
+                this.Controls.Add(panel7);
+                // panel7.Location = new Point(500, 200);
+                panel1.AutoScroll = true;
+                panel8.Visible = false;
+                toolStripStatusLabel9.Text = Globais.user;
+                DataTable dt = BLL1.Refeicao.loadPacks();
+                MakeLabelRounded();
+                panel7.AutoScrollMinSize = new Size(0, 1000);
+                this.Controls.Add(panel7);
+
+                foreach (DataRow row in dt.Rows)
+                {
+                    //picturebox
+                    PictureBox pictureboxx = new PictureBox();
+                    Rectangle myEllipse = new Rectangle(150, 150, -150, -150);
+                    GraphicsPath mypath = new GraphicsPath();
+                    mypath.AddEllipse(myEllipse);
+                    pictureboxx.Region = new Region(mypath);
+                    pictureboxx.Location = new Point(a, s);
+                    pictureboxx.Name = "p" + l;
+                    pictureboxx.Size = new Size(150, 150);
+                    pictureboxx.BringToFront();
+                    ft = (byte[])row["foto"];
+                    pictureboxx.Image = byteArrayToImage(ft);
+                    pictureboxx.SizeMode = PictureBoxSizeMode.StretchImage;
+                    pictureboxx.Tag = (int)row["Id_pack"];
+                    pictureboxx.Click += pictureboxx_click;
+                    panel7.Controls.Add(pictureboxx);
+
+
+                    //Border
+
+
+                    //label
+                    Label label = new Label();
+                    label.BackColor = System.Drawing.Color.Transparent;
+                    label.Location = new Point(q, w);
+                    label.Name = "l" + l;
+                    label.Text = row["nome"].ToString();
+                    label.Size = new Size(100, 30);
+                    label.BringToFront();
+                    label.Font = new Font("Century Gothic", 12);
+                    panel7.Controls.Add(label);
+                    this.Controls.Add(panel7);
+
+                    //label Price
+                    Label labell = new Label();
+                    labell.BackColor = System.Drawing.Color.Transparent;
+                    labell.Location = new Point(xq, xw);
+                    labell.Name = "ls" + l;
+                    labell.Text = row["preco"].ToString() + "€";
+                    labell.Size = new Size(100, 30);
+                    labell.BringToFront();
+                    labell.Font = new Font("Century Gothic", 12);
+                    panel7.Controls.Add(labell);
+                    this.Controls.Add(panel7);
+
+                    q += 300;
+                    w += 300;
+                    xq += 300;
+                    if (l % 3 == 0)
+                    {
+                        q = 185;
+                        w += 250;
+                        a = 140;
+                        s += 250;
+                        xq = 280;
+                        xw += 250;
+
+                    }
+
+                    l += 1;
+
+                }
+            }
+            vs = false;
+        }
+        private void pictureboxx_click(object sender, EventArgs e)
+        {
+            panel8.Visible = false;
+            id = (int)((PictureBox)sender).Tag;
+            DataTable rf = BLL1.Refeicao.loadPk(id);
+
+            try
+            {
+                foreach (DataRow row in rf.Rows)
+                {
+                    Globais.pack = row["nome"].ToString();
+                    fot = (byte[])row["foto"];
+                    preco = Convert.ToDouble(row["preco"]);
+                    pictureBox10.Image = byteArrayToImage(fot);
+                }
+            }
+            catch (Exception erro)
+            {
+                if (guna2DataGridView2.RowCount == 0)
+                {
+                    throw new Exception("Erro ao consultar a Packs por código. Detalhes: " + erro);
+                }
+
+            }
+
+
+            //DateTime.Now.ToString()
+
+            panel9.Visible = true;
+        }
+
+        private void button2_Click_2(object sender, EventArgs e)
+        {
+            pictureBox7.Enabled = true;
+
+
+
+
+
+            do
+            {
+                litens += 1;
+                label3.Text = Convert.ToString(litens);
+                if (m < 10)
+                {
+
+                    guna2DataGridView2.Rows[m].Cells[0].Value = Globais.pack;
+                    guna2DataGridView2.Rows[m].Cells[1].Value = metroLabel4.Text;
+                    guna2DataGridView2.Rows[m].Cells[2].Value = preco;
+                    guna2DataGridView2.Rows[m].Cells[3].Value = pictureBox10.Image;
+                    // guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
+                    m += 1;
+
+
+                }
+                else
+                {
+                    MessageBox.Show("Carrinho Cheio!");
+                    litens = 10;
+                }
+            } while (m > 10);
+
+
+
+
+            for (int i = 0; i < guna2DataGridView2.Columns.Count; i++)
+            {
+                if (guna2DataGridView2.Columns[i] is DataGridViewImageColumn)
+                {
+                    ((DataGridViewImageColumn)guna2DataGridView2.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Zoom;
+                }
+
+            }
+            panel9.Visible = false;
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty((string)guna2DataGridView2.Rows[0].Cells[0].Value))
+            {
+                label7.Visible = true;
+                panel8.Visible = false;
+
+
+
+            }
+            else
+            {
+                label7.Visible = false;
+                if (panel8.Visible == false)
+                {
+                    panel8.Visible = true;
+                }
+                else
+                {
+                    panel8.Visible = false;
+                }
+            }
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            qnt += 1;
+
+            metroLabel4.Text = Convert.ToString(qnt);
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+            if (qnt == 1)
+            {
+                qnt = 1;
+                metroLabel4.Text = Convert.ToString(qnt);
+            }
+            else
+            {
+                qnt -= 1;
+            }
+            metroLabel4.Text = Convert.ToString(qnt);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel9.Visible = false;
+            metroLabel4.Text = "1";
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Tem a certeza que pretende fechar o programa?", "Sair do Programa", MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            else if (result == DialogResult.No)
+            {
+                //
+            }
+        }
+
+        private void guna2DataGridView2_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.ColumnIndex == 4 & String.IsNullOrWhiteSpace((string)guna2DataGridView2.Rows[0].Cells[0].Value))
+                {
+                    MessageBox.Show("teste");
+                }
+                else if (e.ColumnIndex == 4)
+                {
+                    guna2DataGridView2.Rows.RemoveAt(e.RowIndex);
+                    guna2DataGridView2.Rows.Add(1);
+                    m -= 1;
+                }
+
+            }
+            catch (Exception erro) { }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Packs",
+    MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void metroButton2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Refeições",
+   MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
