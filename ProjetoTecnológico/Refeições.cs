@@ -47,6 +47,7 @@ namespace ProjetoTecnológico
         int j = 0;
         int m;
         const int DRAG_HANDLE_SIZE = 7;
+        string pic;
         public Refeições()
         {
             InitializeComponent();
@@ -76,6 +77,7 @@ namespace ProjetoTecnológico
                     fot = (byte[])row["foto"];
                     preco = Convert.ToDouble(row["preco"]);
                     pictureBox6.Image = byteArrayToImage(fot);
+                    
                 }
             }
             catch (Exception erro)
@@ -89,8 +91,13 @@ namespace ProjetoTecnológico
 
 
             //DateTime.Now.ToString()
-
+pic= ( (PictureBox)sender).Name;
             panel5.Visible = true;
+           
+              
+            
+
+
         }
         private void Refeições_Load(object sender, EventArgs e)
         {
@@ -311,11 +318,22 @@ namespace ProjetoTecnológico
         private void button3_Click(object sender, EventArgs e)
         {
             pictureBox2.Enabled = true;
-            
 
 
-
+            foreach (Control x in panel4.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    if (x.Name == pic)
+                    {
+                        x.Enabled = false;
+                    }
+                }
+            }
            
+
+
+
             do
             {
                
@@ -363,6 +381,7 @@ namespace ProjetoTecnológico
         private void button4_Click(object sender, EventArgs e)
         {
             panel5.Visible = false;
+
             metroLabel1.Text = "1";
         }
 
@@ -413,12 +432,36 @@ namespace ProjetoTecnológico
             {
                 if (e.ColumnIndex == 4 & String.IsNullOrWhiteSpace((string)guna2DataGridView1.Rows[0].Cells[0].Value))
                 {
-                   MessageBox.Show("teste");
+                    MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Refeições",
+      MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if(e.ColumnIndex == 4)
                 {
                     guna2DataGridView1.Rows.RemoveAt(e.RowIndex);
                     guna2DataGridView1.Rows.Add(1);
+                    foreach (Control x in panel4.Controls)
+                    {
+                        if (x is PictureBox)
+                        {
+                            if (x.Name == pic)
+                            {
+                                x.Enabled = true;
+                            }
+                        }
+                    }
+
+                    if (itens == 0)
+                    {
+                        itens = 0;
+                        label4.Text = Convert.ToString(itens);
+                    }
+                    else
+                    {
+                        itens -= 1;
+                        label4.Text = Convert.ToString(itens);
+                    }
+                    
+                    
                     j -= 1;
                 }
                
@@ -620,21 +663,25 @@ namespace ProjetoTecnológico
         private void pictureboxx_click(object sender, EventArgs e)
         {
             panel8.Visible = false;
+
             id = (int)((PictureBox)sender).Tag;
-            DataTable rf = BLL1.Refeicao.loadPk(id);
+            DataTable rp = BLL1.Refeicao.loadPk(id);
 
             try
             {
-                foreach (DataRow row in rf.Rows)
+                foreach (DataRow row in rp.Rows)
                 {
                     Globais.pack = row["nome"].ToString();
                     fot = (byte[])row["foto"];
                     preco = Convert.ToDouble(row["preco"]);
                     pictureBox10.Image = byteArrayToImage(fot);
+                    label9.Text = "Pack " + Globais.pack;
+                    
                 }
             }
             catch (Exception erro)
             {
+                
                 if (guna2DataGridView2.RowCount == 0)
                 {
                     throw new Exception("Erro ao consultar a Packs por código. Detalhes: " + erro);
@@ -644,8 +691,9 @@ namespace ProjetoTecnológico
 
 
             //DateTime.Now.ToString()
-
+            pic = ((PictureBox)sender).Name;
             panel9.Visible = true;
+
         }
 
         private void button2_Click_2(object sender, EventArgs e)
@@ -654,6 +702,16 @@ namespace ProjetoTecnológico
 
 
 
+            foreach (Control x in panel7.Controls)
+            {
+                if (x is PictureBox)
+                {
+                    if (x.Name == pic)
+                    {
+                        x.Enabled = false;
+                    }
+                }
+            }
 
 
             do
@@ -741,6 +799,7 @@ namespace ProjetoTecnológico
         private void button5_Click(object sender, EventArgs e)
         {
             panel9.Visible = false;
+           
             metroLabel4.Text = "1";
         }
 
@@ -763,13 +822,34 @@ namespace ProjetoTecnológico
             {
                 if (e.ColumnIndex == 4 & String.IsNullOrWhiteSpace((string)guna2DataGridView2.Rows[0].Cells[0].Value))
                 {
-                    MessageBox.Show("teste");
+                    MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Packs",
+      MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else if (e.ColumnIndex == 4)
                 {
+                    foreach (Control x in panel7.Controls)
+                    {
+                        if (x is PictureBox)
+                        {
+                            if (x.Name == pic)
+                            {
+                                x.Enabled = true;
+                            }
+                        }
+                    }
                     guna2DataGridView2.Rows.RemoveAt(e.RowIndex);
                     guna2DataGridView2.Rows.Add(1);
                     m -= 1;
+                    if (litens == 0)
+                    {
+                        litens = 0;
+                        label3.Text = Convert.ToString(litens);
+                    }
+                    else
+                    {
+                        litens -= 1;
+                        label3.Text = Convert.ToString(litens);
+                    }
                 }
 
             }
