@@ -12,11 +12,14 @@ using System.Security.Cryptography;
 using System.IO;
 using System.Drawing.Drawing2D;
 using System.Threading;
+using System.Drawing.Printing;
 
 namespace ProjetoTecnológico
 {
     public partial class Refeições : MetroFramework.Forms.MetroForm
     {
+        int pedido = 0;
+        DataTable def;
         int itens = 0;
         int litens = 0;
         bool vs = true;
@@ -32,8 +35,8 @@ namespace ProjetoTecnológico
         int p = 140;
         int k = 120;
         int i = 1;
-        int px=280;
-        int py=120;
+        int px = 280;
+        int py = 120;
         //packs
         int q = 185;
         int w = 280;
@@ -48,10 +51,11 @@ namespace ProjetoTecnológico
         int m;
         const int DRAG_HANDLE_SIZE = 7;
         string pic;
+        
         public Refeições()
         {
             InitializeComponent();
-            
+            printDocument1.PrintPage += new PrintPageEventHandler(printDocument1_PrintPage);
         }
 
         public byte[] ImageToByteArray(System.Drawing.Image imageIn)
@@ -77,7 +81,7 @@ namespace ProjetoTecnológico
                     fot = (byte[])row["foto"];
                     preco = Convert.ToDouble(row["preco"]);
                     pictureBox6.Image = byteArrayToImage(fot);
-                    
+                    label10.Text = "Pack " + Globais.prato;
                 }
             }
             catch (Exception erro)
@@ -91,18 +95,114 @@ namespace ProjetoTecnológico
 
 
             //DateTime.Now.ToString()
-pic= ( (PictureBox)sender).Name;
+            pic = ((PictureBox)sender).Name;
             panel5.Visible = true;
-           
-              
-            
+
+
+
 
 
         }
         private void Refeições_Load(object sender, EventArgs e)
         {
-           
-            
+            panel4.Visible = true;
+            panel8.Visible = false;
+            panel7.Visible = false;
+            metroTile1.Enabled = false;
+            metroTile4.Enabled = true;
+            pedido += 1;
+            Globais.idpedido = pedido;
+            if (vz == true)
+            {
+
+
+                guna2DataGridView1.Rows.Clear();
+                guna2DataGridView1.Rows.Add(10);
+
+                //guna2DataGridView1.Rows[j].Height = 60;
+                int l = 373 + 74;
+                this.Controls.Add(panel5);
+                panel5.Location = new Point(500, 200);
+                panel1.AutoScroll = true;
+                panel2.Visible = false;
+                toolStripStatusLabel9.Text = Globais.user;
+                def = BLL1.Refeicao.loadRefeições();
+                MakeLabelRounded();
+                panel4.AutoScrollMinSize = new Size(0, 1000);
+                this.Controls.Add(panel4);
+
+                //panel6.Height = 64;
+                //panel6.Location = new Point(500, 10);
+                //this.Controls.Add(panel6);
+                //this.Controls.Add(label5);
+                //label5.Location= new Point(500, 100);
+                foreach (DataRow row in def.Rows)
+                {
+                    //picturebox
+                    PictureBox picturebox = new PictureBox();
+                    Rectangle myEllipse = new Rectangle(150, 150, -150, -150);
+                    GraphicsPath mypath = new GraphicsPath();
+                    mypath.AddEllipse(myEllipse);
+                    picturebox.Region = new Region(mypath);
+                    picturebox.Location = new Point(p, k);
+                    picturebox.Name = "p" + i;
+                    picturebox.Size = new Size(150, 150);
+                    picturebox.BringToFront();
+                    ft = (byte[])row["foto"];
+                    picturebox.Image = byteArrayToImage(ft);
+                    picturebox.SizeMode = PictureBoxSizeMode.StretchImage;
+                    picturebox.Tag = (int)row["id_refeicao"];
+                    picturebox.Click += picturebox_click;
+                    panel4.Controls.Add(picturebox);
+
+
+                    //Border
+
+
+                    //label
+                    Label label = new Label();
+                    label.BackColor = System.Drawing.Color.Transparent;
+                    label.Location = new Point(x, y);
+                    label.Name = "l" + i;
+                    label.Text = row["Nome"].ToString();
+                    label.Size = new Size(100, 30);
+                    label.BringToFront();
+                    label.Font = new Font("Century Gothic", 12);
+                    panel4.Controls.Add(label);
+                    this.Controls.Add(panel4);
+
+                    //label Price
+                    Label labell = new Label();
+                    labell.BackColor = System.Drawing.Color.Transparent;
+                    labell.Location = new Point(px, py);
+                    labell.Name = "ls" + i;
+                    labell.Text = row["Preco"].ToString() + "€";
+                    labell.Size = new Size(100, 30);
+                    labell.BringToFront();
+                    labell.Font = new Font("Century Gothic", 12);
+                    panel4.Controls.Add(labell);
+                    this.Controls.Add(panel4);
+
+                    x += 300;
+                    p += 300;
+                    px += 300;
+                    if (i % 3 == 0)
+                    {
+                        x = 185;
+                        y += 250;
+                        p = 140;
+                        k += 250;
+                        px = 280;
+                        py += 250;
+
+                    }
+
+                    i += 1;
+
+                }
+            }
+            vz = false;
+
         }
         void TransparetBackground(Control C)
         {
@@ -196,7 +296,7 @@ pic= ( (PictureBox)sender).Name;
             pictureBox2.ImageLocation = System.Windows.Forms.Application.StartupPath + @"\default.png";
             pictureBox2.Size = new System.Drawing.Size(45, 39);
             //
-          
+
         }
 
         private void label_2_Click(object sender, EventArgs e)
@@ -286,9 +386,9 @@ pic= ( (PictureBox)sender).Name;
 
             if (String.IsNullOrEmpty((string)guna2DataGridView1.Rows[0].Cells[0].Value))
             {
-                label2.Visible=true;
+                label2.Visible = true;
                 panel2.Visible = false;
-               
+
 
 
             }
@@ -305,8 +405,8 @@ pic= ( (PictureBox)sender).Name;
                 }
             }
 
-          
-           
+
+
 
         }
 
@@ -314,7 +414,7 @@ pic= ( (PictureBox)sender).Name;
         {
 
         }
-      
+
         private void button3_Click(object sender, EventArgs e)
         {
             pictureBox2.Enabled = true;
@@ -330,53 +430,53 @@ pic= ( (PictureBox)sender).Name;
                     }
                 }
             }
-           
+
 
 
 
             do
             {
-               
+
                 itens += 1;
                 label4.Text = Convert.ToString(itens);
                 if (j < 10)
                 {
-                    
+
                     guna2DataGridView1.Rows[j].Cells[0].Value = Globais.prato;
-                guna2DataGridView1.Rows[j].Cells[1].Value = metroLabel1.Text;
-                guna2DataGridView1.Rows[j].Cells[2].Value = preco;
-                guna2DataGridView1.Rows[j].Cells[3].Value = pictureBox6.Image;
-                    
-               // guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
-                j += 1;
-                   
+                    guna2DataGridView1.Rows[j].Cells[1].Value = metroLabel1.Text;
+                    guna2DataGridView1.Rows[j].Cells[2].Value = preco;
+                    guna2DataGridView1.Rows[j].Cells[3].Value = pictureBox6.Image;
+
+                    // guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
+                    j += 1;
+
 
                 }
-                
+
                 else
                 {
-                   MessageBox.Show("Carrinho Cheio!");
+                    MessageBox.Show("Carrinho Cheio!");
                     itens = 10;
                 }
-            } while (j> 10);
-                
-            
-            
-           
+            } while (j > 10);
+
+
+
+
             for (int i = 0; i < guna2DataGridView1.Columns.Count; i++)
             {
                 if (guna2DataGridView1.Columns[i] is DataGridViewImageColumn)
                 {
                     ((DataGridViewImageColumn)guna2DataGridView1.Columns[i]).ImageLayout = DataGridViewImageCellLayout.Zoom;
                 }
-                
+
             }
             panel5.Visible = false;
 
-        
+
         }
 
-     
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -406,25 +506,7 @@ pic= ( (PictureBox)sender).Name;
             metroLabel1.Text = Convert.ToString(qnt);
         }
 
-        private void panel8_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
-
-        private void panel9_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void guna2DataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -435,7 +517,7 @@ pic= ( (PictureBox)sender).Name;
                     MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Refeições",
       MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if(e.ColumnIndex == 4)
+                else if (e.ColumnIndex == 4)
                 {
                     guna2DataGridView1.Rows.RemoveAt(e.RowIndex);
                     guna2DataGridView1.Rows.Add(1);
@@ -460,20 +542,22 @@ pic= ( (PictureBox)sender).Name;
                         itens -= 1;
                         label4.Text = Convert.ToString(itens);
                     }
-                    
-                    
+
+
                     j -= 1;
                 }
-               
+
             }
             catch (Exception erro) { }
         }
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            panel4.Visible=true;
+            panel4.Visible = true;
             panel8.Visible = false;
             panel7.Visible = false;
+            metroTile1.Enabled = false;
+            metroTile4.Enabled = true;
 
             if (vz == true)
             {
@@ -489,7 +573,7 @@ pic= ( (PictureBox)sender).Name;
                 panel1.AutoScroll = true;
                 panel2.Visible = false;
                 toolStripStatusLabel9.Text = Globais.user;
-                DataTable dt = BLL1.Refeicao.loadRefeições();
+                def = BLL1.Refeicao.loadRefeições();
                 MakeLabelRounded();
                 panel4.AutoScrollMinSize = new Size(0, 1000);
                 this.Controls.Add(panel4);
@@ -499,7 +583,7 @@ pic= ( (PictureBox)sender).Name;
                 //this.Controls.Add(panel6);
                 //this.Controls.Add(label5);
                 //label5.Location= new Point(500, 100);
-                foreach (DataRow row in dt.Rows)
+                foreach (DataRow row in def.Rows)
                 {
                     //picturebox
                     PictureBox picturebox = new PictureBox();
@@ -569,11 +653,12 @@ pic= ( (PictureBox)sender).Name;
 
         private void metroTile4_Click(object sender, EventArgs e)
         {
-            
+
             panel4.Visible = false;
             panel2.Visible = false;
             panel7.Visible = true;
-            
+            metroTile1.Enabled = true;
+            metroTile4.Enabled = false;
             if (vs == true)
             {
 
@@ -676,12 +761,12 @@ pic= ( (PictureBox)sender).Name;
                     preco = Convert.ToDouble(row["preco"]);
                     pictureBox10.Image = byteArrayToImage(fot);
                     label9.Text = "Pack " + Globais.pack;
-                    
+
                 }
             }
             catch (Exception erro)
             {
-                
+
                 if (guna2DataGridView2.RowCount == 0)
                 {
                     throw new Exception("Erro ao consultar a Packs por código. Detalhes: " + erro);
@@ -799,7 +884,7 @@ pic= ( (PictureBox)sender).Name;
         private void button5_Click(object sender, EventArgs e)
         {
             panel9.Visible = false;
-           
+
             metroLabel4.Text = "1";
         }
 
@@ -858,15 +943,124 @@ pic= ( (PictureBox)sender).Name;
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Packs",
-    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            if (String.IsNullOrWhiteSpace((string)guna2DataGridView2.Rows[0].Cells[0].Value))
+            {
+                MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Packs",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+
+                string data = DateTime.Now.ToString("dd-MM-yyyy");
+                foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+                {
+                    int pos = row.Index;
+                    if (String.IsNullOrWhiteSpace((string)guna2DataGridView1.Rows[pos].Cells[0].Value))
+                    { }
+                    else
+                    {
+                        guna2DataGridView1.Rows[pos].Cells[0].Value.ToString();
+
+                        BLL1.Refeicao.insertPedido("teste", guna2DataGridView1.Rows[pos].Cells[0].Value.ToString(),"null", Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value), Convert.ToDouble(guna2DataGridView1.Rows[pos].Cells[2].Value), data);
+                    }
+
+                }
+            }
+
+
+            guna2DataGridView2.Visible = false;
+            panel10.Visible = true;
         }
 
         private void metroButton2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Refeições",
-   MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            if (String.IsNullOrWhiteSpace((string)guna2DataGridView1.Rows[0].Cells[0].Value))
+            {
+                MessageBox.Show("Nenhum item adicionado ao carrinho", "Erro Refeições",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
+            else
+            {
+                guna2DataGridView2.Rows.Add(10);
+                if (String.IsNullOrWhiteSpace((string)guna2DataGridView2.Rows[0].Cells[0].Value))
+                {
+                    Globais.pack = "NULL";
+                }
+                else
+                {
+                    Globais.pack = guna2DataGridView2.Rows[0].Cells[0].Value.ToString();
+                }
+            }
+
+            string data = DateTime.Now.ToString("dd-MM-yyyy");
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                int pos = row.Index;
+
+
+                if (String.IsNullOrWhiteSpace((string)guna2DataGridView1.Rows[pos].Cells[0].Value))
+                { }
+                else
+                {
+
+                    guna2DataGridView1.Rows[pos].Cells[0].Value.ToString();
+                    BLL1.Refeicao.insertPedido("teste", guna2DataGridView1.Rows[pos].Cells[0].Value.ToString(), Globais.pack, Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value), Convert.ToDouble(guna2DataGridView1.Rows[pos].Cells[2].Value), data);
+
+                }
+
+            }
+
+
+
+            guna2DataGridView1.Visible = false;
+            panel10.Visible = true;
+            panel6.Visible = false;
+            metroTile4.Enabled = false;
+        }
+        
+
+        private void guna2CirclePictureBox1_Click_1(object sender, EventArgs e)
+        {
+            foreach (DataRow row in def.Rows)
+            {
+                if (row["Nome"].ToString() == guna2TextBox1.Text)
+                {
+
+                }
+            }
+        }
+
+        private void metroButton3_Click(object sender, EventArgs e)
+        {
+          
+             CaptureScreen();
+            printDocument1.Print();
+        }
+        private void CaptureScreen()
+        {
+            Graphics myGraphics = this.CreateGraphics();
+            Size s = this.panel10.Size;
+            memoryImage = new Bitmap(s.Width, s.Height, myGraphics);
+            Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+            memoryGraphics.CopyFromScreen(this.Location.X + this.panel10.Location.X, this.Location.Y + this.panel10.Location.Y + 30, 0, 0, s);
+        }
+
+        private PrintDocument printDocument1 = new PrintDocument();
+        Bitmap memoryImage;
+        private void printDocument1_PrintPage(System.Object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            var image = new Bitmap(this.Width, this.Height);
+            var graphics = Graphics.FromImage(image);
+            graphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
+            e.Graphics.DrawImage(image, 20, 20);
         }
     }
 }
+
+
+
+
 

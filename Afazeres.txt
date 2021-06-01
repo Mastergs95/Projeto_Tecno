@@ -1,1 +1,2 @@
-Picturebox packs não receb a imagem da datatable .panel quantidade
+Resolver problema com datagridviews quando voltamos da fatura.
+Testar imprimir pdf noutro pc com adobe ativado.

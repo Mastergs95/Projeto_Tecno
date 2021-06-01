@@ -16,5 +16,6 @@ namespace ProjetoTecnológico
         public static bool infouser;
         public static string prato;
         public static string pack;
+        public static int idpedido;
     }
 }

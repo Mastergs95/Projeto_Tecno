@@ -24,17 +24,19 @@ namespace BusinessLogicLayer
                 return dal.executarScalar("select Img from Imagem where id=1", sqlParams);
             
             }
-            static public int insertPedido(string Cliente, string Nome_ref, int quantidade, double Precot,DateTime data)
+            static public int insertPedido(string Cliente, string Nome_ref, string Nome_pack, int quantidade, double Precot,string data)
             {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{
+     
                 new SqlParameter("@Cliente", Cliente),
                 new SqlParameter("@Nome_ref", Nome_ref),
+                new SqlParameter("@Nome_pack", Nome_pack),
                  new SqlParameter("@quantidade", quantidade),
                  new SqlParameter("@Precot", Precot),
                   new SqlParameter("@data", data),
             };
-                return dal.executarNonQuery("INSERT into Pedidos (Cliente,Nome_ref,quantidade,Precot,data) VALUES (@Cliente,@Nome_ref,@quantidade,@Precot,data)", sqlParams);
+                return dal.executarNonQuery("INSERT into Pedidos (Cliente,Nome_ref,Nome_pack,quantidade,Precot,data) VALUES (@Cliente,@Nome_ref,@Nome_pack,@quantidade,@Precot,@data)", sqlParams);
             }
             static public int insertPacks(string nome, string prato, string sobremesa,byte[]foto,double preco)
             {
