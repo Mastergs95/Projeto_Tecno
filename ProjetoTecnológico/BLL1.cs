@@ -51,6 +51,21 @@ namespace BusinessLogicLayer
                 return dal.executarNonQuery("INSERT into packs (nome,prato,sobremesa,foto,preco) VALUES (@nome,@prato,@sobremesa,@foto,@preco)", sqlParams);
             }
 
+            static public DataTable loadPedido()
+            {
+                DAL dal = new DAL();
+                return dal.executarReader("select * from Pedidos where", null);
+            }
+
+            static public DataTable queryPreco(string user, string data)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                new SqlParameter("@user", user),
+                   new SqlParameter("@data", data),
+                };
+                return dal.executarReader("select * from Pedidos where @user=Cliente and @data=data", sqlParams);
+            }
             static public DataTable loadRefeições()
             {
                 DAL dal = new DAL();

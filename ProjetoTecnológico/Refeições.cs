@@ -81,7 +81,7 @@ namespace ProjetoTecnológico
                     fot = (byte[])row["foto"];
                     preco = Convert.ToDouble(row["preco"]);
                     pictureBox6.Image = byteArrayToImage(fot);
-                    label10.Text = "Pack " + Globais.prato;
+                    label10.Text = Globais.prato;
                 }
             }
             catch (Exception erro)
@@ -1016,8 +1016,10 @@ namespace ProjetoTecnológico
 
 
             guna2DataGridView1.Visible = false;
+            guna2DataGridView2.Visible = false;
             panel10.Visible = true;
             panel6.Visible = false;
+            panel2.Visible = false;
             metroTile4.Enabled = false;
         }
         
@@ -1054,8 +1056,23 @@ namespace ProjetoTecnológico
         {
             var image = new Bitmap(this.Width, this.Height);
             var graphics = Graphics.FromImage(image);
-            graphics.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
-            e.Graphics.DrawImage(image, 20, 20);
+            graphics.CopyFromScreen(this.Location.X+400, this.Location.Y-200, 0, 0, this.Size);
+            e.Graphics.DrawImage(image, 0, 0);
+        }
+
+        private void metroButton4_Click(object sender, EventArgs e)
+        {
+            
+            guna2DataGridView3.DataSource=BLL1.Refeicao.loadPedido();
+        }
+
+        private void metroButton5_Click(object sender, EventArgs e)
+        {
+            String datatd =DateTime.Now.ToString("dd-MM-yyyy");
+            string useri ="teste";
+            guna2DataGridView3.DataSource = BLL1.Refeicao.queryPreco(useri,datatd);
+           
+            //adiconar painel de obrigado pela sua scolha volte sempre e voltamos para o login- client feito
         }
     }
 }
