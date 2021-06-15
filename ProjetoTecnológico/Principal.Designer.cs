@@ -47,6 +47,9 @@ namespace ProjetoTecnológico
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
@@ -60,6 +63,9 @@ namespace ProjetoTecnológico
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.metroButton12 = new MetroFramework.Controls.MetroButton();
             this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
@@ -80,6 +86,9 @@ namespace ProjetoTecnológico
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
             this.guna2DataGridView5 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.metroButton13 = new MetroFramework.Controls.MetroButton();
@@ -101,6 +110,9 @@ namespace ProjetoTecnológico
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
             this.guna2DataGridView6 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.metroProgressBar3 = new MetroFramework.Controls.MetroProgressBar();
@@ -149,6 +161,9 @@ namespace ProjetoTecnológico
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
+            this.label37 = new System.Windows.Forms.Label();
+            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.metroButton8 = new MetroFramework.Controls.MetroButton();
             this.textBox12 = new System.Windows.Forms.TextBox();
@@ -159,6 +174,9 @@ namespace ProjetoTecnológico
             this.textBox15 = new System.Windows.Forms.TextBox();
             this.metroButton7 = new MetroFramework.Controls.MetroButton();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
+            this.label38 = new System.Windows.Forms.Label();
+            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.metroButton9 = new MetroFramework.Controls.MetroButton();
@@ -170,6 +188,9 @@ namespace ProjetoTecnológico
             this.textBox20 = new System.Windows.Forms.TextBox();
             this.metroButton10 = new MetroFramework.Controls.MetroButton();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
+            this.label39 = new System.Windows.Forms.Label();
+            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
             this.guna2DataGridView2 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.textBox21 = new System.Windows.Forms.TextBox();
@@ -188,34 +209,25 @@ namespace ProjetoTecnológico
             this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.metroLabel18 = new MetroFramework.Controls.MetroLabel();
-            this.numericUpDown15 = new System.Windows.Forms.NumericUpDown();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.numericUpDown16 = new System.Windows.Forms.NumericUpDown();
-            this.label37 = new System.Windows.Forms.Label();
-            this.numericUpDown17 = new System.Windows.Forms.NumericUpDown();
-            this.label38 = new System.Windows.Forms.Label();
-            this.metroLabel19 = new MetroFramework.Controls.MetroLabel();
-            this.numericUpDown18 = new System.Windows.Forms.NumericUpDown();
-            this.label39 = new System.Windows.Forms.Label();
-            this.metroLabel20 = new MetroFramework.Controls.MetroLabel();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.guna2DataGridView8 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.metroButton15 = new MetroFramework.Controls.MetroButton();
+            this.label41 = new System.Windows.Forms.Label();
+            this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).BeginInit();
@@ -223,6 +235,7 @@ namespace ProjetoTecnológico
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).BeginInit();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).BeginInit();
@@ -235,21 +248,21 @@ namespace ProjetoTecnológico
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView3)).BeginInit();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.tabPage7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).BeginInit();
+            this.tabControl3.SuspendLayout();
+            this.tabPage8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView8)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTile3
@@ -298,6 +311,7 @@ namespace ProjetoTecnológico
             this.metroTile5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.metroTile5.TileTextFontSize = MetroFramework.MetroTileTextSize.Tall;
             this.metroTile5.UseSelectable = true;
+            this.metroTile5.Click += new System.EventHandler(this.metroTile5_Click);
             // 
             // label1
             // 
@@ -424,9 +438,9 @@ namespace ProjetoTecnológico
             this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
+            this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl.HotTrack = true;
             this.tabControl.Location = new System.Drawing.Point(315, 5);
@@ -475,6 +489,48 @@ namespace ProjetoTecnológico
             this.tabPage1.Text = "Adicionar Refeições";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // numericUpDown13
+            // 
+            this.numericUpDown13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown13.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown13.DecimalPlaces = 2;
+            this.numericUpDown13.Location = new System.Drawing.Point(693, 236);
+            this.numericUpDown13.Name = "numericUpDown13";
+            this.numericUpDown13.ReadOnly = true;
+            this.numericUpDown13.Size = new System.Drawing.Size(190, 28);
+            this.numericUpDown13.TabIndex = 29;
+            this.numericUpDown13.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
+            this.numericUpDown13.Click += new System.EventHandler(this.numericUpDown13_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(889, 240);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "€";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(609, 235);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(63, 21);
+            this.label32.TabIndex = 27;
+            this.label32.Text = "Preço";
             // 
             // pictureBox7
             // 
@@ -790,6 +846,46 @@ namespace ProjetoTecnológico
             this.tabPage2.Text = "Editar Refeições";
             this.tabPage2.UseVisualStyleBackColor = true;
             this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // numericUpDown14
+            // 
+            this.numericUpDown14.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown14.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown14.DecimalPlaces = 2;
+            this.numericUpDown14.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown14.Location = new System.Drawing.Point(225, 451);
+            this.numericUpDown14.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown14.Name = "numericUpDown14";
+            this.numericUpDown14.ReadOnly = true;
+            this.numericUpDown14.Size = new System.Drawing.Size(170, 28);
+            this.numericUpDown14.TabIndex = 93;
+            this.numericUpDown14.Click += new System.EventHandler(this.numericUpDown14_Click);
+            // 
+            // label33
+            // 
+            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(401, 453);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(16, 20);
+            this.label33.TabIndex = 92;
+            this.label33.Text = "€";
+            // 
+            // label34
+            // 
+            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(49, 453);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(63, 21);
+            this.label34.TabIndex = 91;
+            this.label34.Text = "Preço";
             // 
             // guna2DataGridView5
             // 
@@ -1132,6 +1228,45 @@ namespace ProjetoTecnológico
             this.tabPage3.Text = "Remover Refeições";
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+            // 
+            // numericUpDown15
+            // 
+            this.numericUpDown15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown15.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown15.DecimalPlaces = 2;
+            this.numericUpDown15.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown15.Location = new System.Drawing.Point(235, 428);
+            this.numericUpDown15.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown15.Name = "numericUpDown15";
+            this.numericUpDown15.ReadOnly = true;
+            this.numericUpDown15.Size = new System.Drawing.Size(170, 26);
+            this.numericUpDown15.TabIndex = 94;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(411, 430);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(16, 20);
+            this.label35.TabIndex = 93;
+            this.label35.Text = "€";
+            // 
+            // label36
+            // 
+            this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(57, 425);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(63, 21);
+            this.label36.TabIndex = 92;
+            this.label36.Text = "Preço";
             // 
             // guna2DataGridView6
             // 
@@ -1949,6 +2084,50 @@ namespace ProjetoTecnológico
             this.tabPage5.UseVisualStyleBackColor = true;
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // numericUpDown16
+            // 
+            this.numericUpDown16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown16.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown16.DecimalPlaces = 2;
+            this.numericUpDown16.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown16.Location = new System.Drawing.Point(285, 316);
+            this.numericUpDown16.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown16.Name = "numericUpDown16";
+            this.numericUpDown16.ReadOnly = true;
+            this.numericUpDown16.Size = new System.Drawing.Size(153, 26);
+            this.numericUpDown16.TabIndex = 97;
+            this.numericUpDown16.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
+            this.numericUpDown16.Click += new System.EventHandler(this.numericUpDown16_Click);
+            // 
+            // label37
+            // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.Location = new System.Drawing.Point(453, 318);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(16, 20);
+            this.label37.TabIndex = 96;
+            this.label37.Text = "€";
+            // 
+            // metroLabel18
+            // 
+            this.metroLabel18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel18.AutoSize = true;
+            this.metroLabel18.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel18.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel18.Location = new System.Drawing.Point(152, 311);
+            this.metroLabel18.Name = "metroLabel18";
+            this.metroLabel18.Size = new System.Drawing.Size(56, 25);
+            this.metroLabel18.TabIndex = 81;
+            this.metroLabel18.Text = "Preço";
+            this.metroLabel18.UseCustomBackColor = true;
+            // 
             // pictureBox4
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -2101,6 +2280,50 @@ namespace ProjetoTecnológico
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Editar Packs";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown17
+            // 
+            this.numericUpDown17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown17.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown17.DecimalPlaces = 2;
+            this.numericUpDown17.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown17.Location = new System.Drawing.Point(280, 245);
+            this.numericUpDown17.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown17.Name = "numericUpDown17";
+            this.numericUpDown17.ReadOnly = true;
+            this.numericUpDown17.Size = new System.Drawing.Size(148, 26);
+            this.numericUpDown17.TabIndex = 100;
+            this.numericUpDown17.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
+            this.numericUpDown17.Click += new System.EventHandler(this.numericUpDown17_Click);
+            // 
+            // label38
+            // 
+            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(448, 247);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(16, 20);
+            this.label38.TabIndex = 99;
+            this.label38.Text = "€";
+            // 
+            // metroLabel19
+            // 
+            this.metroLabel19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel19.AutoSize = true;
+            this.metroLabel19.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel19.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel19.Location = new System.Drawing.Point(147, 240);
+            this.metroLabel19.Name = "metroLabel19";
+            this.metroLabel19.Size = new System.Drawing.Size(56, 25);
+            this.metroLabel19.TabIndex = 98;
+            this.metroLabel19.Text = "Preço";
+            this.metroLabel19.UseCustomBackColor = true;
             // 
             // guna2DataGridView1
             // 
@@ -2314,6 +2537,48 @@ namespace ProjetoTecnológico
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Apagar Packs";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown18
+            // 
+            this.numericUpDown18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown18.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown18.DecimalPlaces = 2;
+            this.numericUpDown18.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericUpDown18.Location = new System.Drawing.Point(249, 284);
+            this.numericUpDown18.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.numericUpDown18.Name = "numericUpDown18";
+            this.numericUpDown18.ReadOnly = true;
+            this.numericUpDown18.Size = new System.Drawing.Size(148, 26);
+            this.numericUpDown18.TabIndex = 103;
+            // 
+            // label39
+            // 
+            this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.Location = new System.Drawing.Point(417, 286);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(16, 20);
+            this.label39.TabIndex = 102;
+            this.label39.Text = "€";
+            // 
+            // metroLabel20
+            // 
+            this.metroLabel20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroLabel20.AutoSize = true;
+            this.metroLabel20.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel20.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel20.Location = new System.Drawing.Point(116, 279);
+            this.metroLabel20.Name = "metroLabel20";
+            this.metroLabel20.Size = new System.Drawing.Size(56, 25);
+            this.metroLabel20.TabIndex = 101;
+            this.metroLabel20.Text = "Preço";
+            this.metroLabel20.UseCustomBackColor = true;
             // 
             // guna2DataGridView2
             // 
@@ -2573,268 +2838,156 @@ namespace ProjetoTecnológico
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // numericUpDown13
+            // tabControl3
             // 
-            this.numericUpDown13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown13.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown13.DecimalPlaces = 2;
-            this.numericUpDown13.Location = new System.Drawing.Point(693, 236);
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.ReadOnly = true;
-            this.numericUpDown13.Size = new System.Drawing.Size(190, 28);
-            this.numericUpDown13.TabIndex = 29;
-            this.numericUpDown13.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
-            this.numericUpDown13.Click += new System.EventHandler(this.numericUpDown13_Click);
+            this.tabControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl3.Controls.Add(this.tabPage8);
+            this.tabControl3.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControl3.Location = new System.Drawing.Point(315, 5);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1102, 653);
+            this.tabControl3.TabIndex = 21;
+            this.tabControl3.Visible = false;
             // 
-            // label2
+            // tabPage8
             // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(889, 240);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 20);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "€";
+            this.tabPage8.BackgroundImage = global::ProjetoTecnológico.Properties.Resources.background;
+            this.tabPage8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage8.Controls.Add(this.comboBox1);
+            this.tabPage8.Controls.Add(this.guna2DataGridView8);
+            this.tabPage8.Controls.Add(this.metroButton15);
+            this.tabPage8.Controls.Add(this.label41);
+            this.tabPage8.Controls.Add(this.metroLabel28);
+            this.tabPage8.Location = new System.Drawing.Point(4, 29);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(1094, 620);
+            this.tabPage8.TabIndex = 0;
+            this.tabPage8.Text = "Atividade";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // label32
+            // guna2DataGridView8
             // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(609, 235);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(63, 21);
-            this.label32.TabIndex = 27;
-            this.label32.Text = "Preço";
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
+            this.guna2DataGridView8.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.guna2DataGridView8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2DataGridView8.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.guna2DataGridView8.BackgroundColor = System.Drawing.Color.White;
+            this.guna2DataGridView8.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.guna2DataGridView8.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView8.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView8.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            this.guna2DataGridView8.ColumnHeadersHeight = 25;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView8.DefaultCellStyle = dataGridViewCellStyle21;
+            this.guna2DataGridView8.EnableHeadersVisualStyles = false;
+            this.guna2DataGridView8.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
+            this.guna2DataGridView8.Location = new System.Drawing.Point(40, 139);
+            this.guna2DataGridView8.Name = "guna2DataGridView8";
+            this.guna2DataGridView8.RowHeadersVisible = false;
+            this.guna2DataGridView8.RowHeadersWidth = 45;
+            this.guna2DataGridView8.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.guna2DataGridView8.Size = new System.Drawing.Size(519, 297);
+            this.guna2DataGridView8.TabIndex = 90;
+            this.guna2DataGridView8.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.DeepPurple;
+            this.guna2DataGridView8.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(196)))), ((int)(((byte)(233)))));
+            this.guna2DataGridView8.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.guna2DataGridView8.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView8.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView8.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.guna2DataGridView8.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView8.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(207)))), ((int)(((byte)(193)))), ((int)(((byte)(232)))));
+            this.guna2DataGridView8.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(103)))), ((int)(((byte)(58)))), ((int)(((byte)(183)))));
+            this.guna2DataGridView8.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.guna2DataGridView8.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView8.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.guna2DataGridView8.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView8.ThemeStyle.HeaderStyle.Height = 25;
+            this.guna2DataGridView8.ThemeStyle.ReadOnly = false;
+            this.guna2DataGridView8.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(215)))), ((int)(((byte)(240)))));
+            this.guna2DataGridView8.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.guna2DataGridView8.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2DataGridView8.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
+            this.guna2DataGridView8.ThemeStyle.RowsStyle.Height = 22;
+            this.guna2DataGridView8.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(123)))), ((int)(((byte)(207)))));
+            this.guna2DataGridView8.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // numericUpDown14
+            // metroButton15
             // 
-            this.numericUpDown14.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown14.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown14.DecimalPlaces = 2;
-            this.numericUpDown14.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown14.Location = new System.Drawing.Point(225, 451);
-            this.numericUpDown14.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown14.Name = "numericUpDown14";
-            this.numericUpDown14.ReadOnly = true;
-            this.numericUpDown14.Size = new System.Drawing.Size(170, 28);
-            this.numericUpDown14.TabIndex = 93;
-            this.numericUpDown14.Click += new System.EventHandler(this.numericUpDown14_Click);
+            this.metroButton15.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.metroButton15.BackColor = System.Drawing.Color.Transparent;
+            this.metroButton15.Enabled = false;
+            this.metroButton15.ForeColor = System.Drawing.Color.MediumPurple;
+            this.metroButton15.Location = new System.Drawing.Point(328, 76);
+            this.metroButton15.Name = "metroButton15";
+            this.metroButton15.Size = new System.Drawing.Size(105, 32);
+            this.metroButton15.TabIndex = 69;
+            this.metroButton15.Text = "Editar Funcionário";
+            this.metroButton15.UseCustomBackColor = true;
+            this.metroButton15.UseCustomForeColor = true;
+            this.metroButton15.UseSelectable = true;
             // 
-            // label33
+            // label41
             // 
-            this.label33.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(401, 453);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(16, 20);
-            this.label33.TabIndex = 92;
-            this.label33.Text = "€";
+            this.label41.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(23, 26);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(83, 20);
+            this.label41.TabIndex = 55;
+            this.label41.Tag = "";
+            this.label41.Text = "Etatísticas";
             // 
-            // label34
+            // metroLabel28
             // 
-            this.label34.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(49, 453);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(63, 21);
-            this.label34.TabIndex = 91;
-            this.label34.Text = "Preço";
+            this.metroLabel28.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.metroLabel28.AutoSize = true;
+            this.metroLabel28.BackColor = System.Drawing.Color.Transparent;
+            this.metroLabel28.FontWeight = MetroFramework.MetroLabelWeight.Regular;
+            this.metroLabel28.Location = new System.Drawing.Point(33, 79);
+            this.metroLabel28.Name = "metroLabel28";
+            this.metroLabel28.Size = new System.Drawing.Size(89, 19);
+            this.metroLabel28.TabIndex = 46;
+            this.metroLabel28.Text = "Procurar por:";
+            this.metroLabel28.UseCustomBackColor = true;
             // 
-            // metroLabel18
+            // comboBox1
             // 
-            this.metroLabel18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel18.AutoSize = true;
-            this.metroLabel18.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel18.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel18.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel18.Location = new System.Drawing.Point(152, 311);
-            this.metroLabel18.Name = "metroLabel18";
-            this.metroLabel18.Size = new System.Drawing.Size(56, 25);
-            this.metroLabel18.TabIndex = 81;
-            this.metroLabel18.Text = "Preço";
-            this.metroLabel18.UseCustomBackColor = true;
-            // 
-            // numericUpDown15
-            // 
-            this.numericUpDown15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown15.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown15.DecimalPlaces = 2;
-            this.numericUpDown15.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown15.Location = new System.Drawing.Point(235, 428);
-            this.numericUpDown15.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown15.Name = "numericUpDown15";
-            this.numericUpDown15.ReadOnly = true;
-            this.numericUpDown15.Size = new System.Drawing.Size(170, 26);
-            this.numericUpDown15.TabIndex = 94;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(411, 430);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(16, 20);
-            this.label35.TabIndex = 93;
-            this.label35.Text = "€";
-            // 
-            // label36
-            // 
-            this.label36.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(57, 425);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(63, 21);
-            this.label36.TabIndex = 92;
-            this.label36.Text = "Preço";
-            // 
-            // numericUpDown16
-            // 
-            this.numericUpDown16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown16.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown16.DecimalPlaces = 2;
-            this.numericUpDown16.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown16.Location = new System.Drawing.Point(285, 316);
-            this.numericUpDown16.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown16.Name = "numericUpDown16";
-            this.numericUpDown16.ReadOnly = true;
-            this.numericUpDown16.Size = new System.Drawing.Size(153, 26);
-            this.numericUpDown16.TabIndex = 97;
-            this.numericUpDown16.ValueChanged += new System.EventHandler(this.numericUpDown16_ValueChanged);
-            this.numericUpDown16.Click += new System.EventHandler(this.numericUpDown16_Click);
-            // 
-            // label37
-            // 
-            this.label37.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(453, 318);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(16, 20);
-            this.label37.TabIndex = 96;
-            this.label37.Text = "€";
-            // 
-            // numericUpDown17
-            // 
-            this.numericUpDown17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown17.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown17.DecimalPlaces = 2;
-            this.numericUpDown17.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown17.Location = new System.Drawing.Point(280, 245);
-            this.numericUpDown17.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown17.Name = "numericUpDown17";
-            this.numericUpDown17.ReadOnly = true;
-            this.numericUpDown17.Size = new System.Drawing.Size(148, 26);
-            this.numericUpDown17.TabIndex = 100;
-            this.numericUpDown17.ValueChanged += new System.EventHandler(this.numericUpDown17_ValueChanged);
-            this.numericUpDown17.Click += new System.EventHandler(this.numericUpDown17_Click);
-            // 
-            // label38
-            // 
-            this.label38.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(448, 247);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(16, 20);
-            this.label38.TabIndex = 99;
-            this.label38.Text = "€";
-            // 
-            // metroLabel19
-            // 
-            this.metroLabel19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel19.AutoSize = true;
-            this.metroLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel19.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel19.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel19.Location = new System.Drawing.Point(147, 240);
-            this.metroLabel19.Name = "metroLabel19";
-            this.metroLabel19.Size = new System.Drawing.Size(56, 25);
-            this.metroLabel19.TabIndex = 98;
-            this.metroLabel19.Text = "Preço";
-            this.metroLabel19.UseCustomBackColor = true;
-            // 
-            // numericUpDown18
-            // 
-            this.numericUpDown18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown18.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown18.DecimalPlaces = 2;
-            this.numericUpDown18.Font = new System.Drawing.Font("MS UI Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown18.Location = new System.Drawing.Point(249, 284);
-            this.numericUpDown18.Maximum = new decimal(new int[] {
-            1000,
-            0,
-            0,
-            0});
-            this.numericUpDown18.Name = "numericUpDown18";
-            this.numericUpDown18.ReadOnly = true;
-            this.numericUpDown18.Size = new System.Drawing.Size(148, 26);
-            this.numericUpDown18.TabIndex = 103;
-            // 
-            // label39
-            // 
-            this.label39.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(417, 286);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(16, 20);
-            this.label39.TabIndex = 102;
-            this.label39.Text = "€";
-            // 
-            // metroLabel20
-            // 
-            this.metroLabel20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroLabel20.AutoSize = true;
-            this.metroLabel20.BackColor = System.Drawing.Color.Transparent;
-            this.metroLabel20.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel20.FontWeight = MetroFramework.MetroLabelWeight.Regular;
-            this.metroLabel20.Location = new System.Drawing.Point(116, 279);
-            this.metroLabel20.Name = "metroLabel20";
-            this.metroLabel20.Size = new System.Drawing.Size(56, 25);
-            this.metroLabel20.TabIndex = 101;
-            this.metroLabel20.Text = "Preço";
-            this.metroLabel20.UseCustomBackColor = true;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(152, 79);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(161, 27);
+            this.comboBox1.TabIndex = 91;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 691);
+            this.Controls.Add(this.tabControl3);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tabControl2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "Principal";
@@ -2849,6 +3002,7 @@ namespace ProjetoTecnológico
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
@@ -2856,6 +3010,7 @@ namespace ProjetoTecnológico
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown8)).EndInit();
@@ -2864,6 +3019,7 @@ namespace ProjetoTecnológico
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown5)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown9)).EndInit();
@@ -2878,24 +3034,25 @@ namespace ProjetoTecnológico
             this.tabControl2.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.tabPage7.ResumeLayout(false);
             this.tabPage7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown18)).EndInit();
+            this.tabControl3.ResumeLayout(false);
+            this.tabPage8.ResumeLayout(false);
+            this.tabPage8.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView8)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3060,5 +3217,12 @@ namespace ProjetoTecnológico
         private System.Windows.Forms.NumericUpDown numericUpDown18;
         private System.Windows.Forms.Label label39;
         private MetroFramework.Controls.MetroLabel metroLabel20;
+        private System.Windows.Forms.TabControl tabControl3;
+        private System.Windows.Forms.TabPage tabPage8;
+        private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView8;
+        private MetroFramework.Controls.MetroButton metroButton15;
+        private System.Windows.Forms.Label label41;
+        private MetroFramework.Controls.MetroLabel metroLabel28;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

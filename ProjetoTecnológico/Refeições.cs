@@ -962,7 +962,7 @@ namespace ProjetoTecnológico
                     {
                         guna2DataGridView1.Rows[pos].Cells[0].Value.ToString();
 
-                        BLL1.Refeicao.insertPedido("teste", guna2DataGridView1.Rows[pos].Cells[0].Value.ToString(),"null", Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value), Convert.ToDouble(guna2DataGridView1.Rows[pos].Cells[2].Value), data);
+                        BLL1.Refeicao.insertPedido("teste", guna2DataGridView1.Rows[pos].Cells[0].Value.ToString(), Globais.pack, Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value), Convert.ToDouble(guna2DataGridView1.Rows[pos].Cells[2].Value), data);
                     }
 
                 }
@@ -994,7 +994,7 @@ namespace ProjetoTecnológico
                     Globais.pack = guna2DataGridView2.Rows[0].Cells[0].Value.ToString();
                 }
             }
-
+            bool r = false;
             string data = DateTime.Now.ToString("dd-MM-yyyy");
             foreach (DataGridViewRow row in guna2DataGridView1.Rows)
             {
@@ -1005,13 +1005,16 @@ namespace ProjetoTecnológico
                 { }
                 else
                 {
-
-                    guna2DataGridView1.Rows[pos].Cells[0].Value.ToString();
-                    BLL1.Refeicao.insertPedido("teste", guna2DataGridView1.Rows[pos].Cells[0].Value.ToString(), Globais.pack, Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value), Convert.ToDouble(guna2DataGridView1.Rows[pos].Cells[2].Value), data);
-
+                    panel12.Visible = true;
+                    panel12.BringToFront();
                 }
 
             }
+            
+            
+           
+          
+
 
 
 
@@ -1073,6 +1076,20 @@ namespace ProjetoTecnológico
             guna2DataGridView3.DataSource = BLL1.Refeicao.queryPreco(useri,datatd);
            
             //adiconar painel de obrigado pela sua scolha volte sempre e voltamos para o login- client feito
+        }
+
+        private void panel11_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string s = dateTimePicker1.Value.Date.ToString();
+            string h = dateTimePicker1.Value.Hour.ToString();
+            string t = textBox7.Text;
+            guna2DataGridView3.DataSource = BLL1.Refeicao.queryIdP("teste", "14/06/2021");
+            panel12.Visible = false;
         }
     }
 }

@@ -24,17 +24,18 @@ namespace BusinessLogicLayer
                 return dal.executarScalar("select Img from Imagem where id=1", sqlParams);
             
             }
-            static public int insertPedido(string Cliente, string Nome_ref, string Nome_pack, int quantidade, double Precot,string data)
+            static public int insertPedido(string Cliente, string Nome_ref, string Nome_pack, int quantidade, double Precot,string data )
             {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{
-     
+               
                 new SqlParameter("@Cliente", Cliente),
                 new SqlParameter("@Nome_ref", Nome_ref),
                 new SqlParameter("@Nome_pack", Nome_pack),
                  new SqlParameter("@quantidade", quantidade),
                  new SqlParameter("@Precot", Precot),
                   new SqlParameter("@data", data),
+
             };
                 return dal.executarNonQuery("INSERT into Pedidos (Cliente,Nome_ref,Nome_pack,quantidade,Precot,data) VALUES (@Cliente,@Nome_ref,@Nome_pack,@quantidade,@Precot,@data)", sqlParams);
             }
@@ -66,6 +67,17 @@ namespace BusinessLogicLayer
                 };
                 return dal.executarReader("select * from Pedidos where @user=Cliente and @data=data", sqlParams);
             }
+
+            static public DataTable queryIdP(string user, string data)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                new SqlParameter("@user", user),
+                   new SqlParameter("@data", data),
+                };
+                return dal.executarReader("select Id_pedido from Pedidos where @user=Cliente and @data=data ", sqlParams);
+            }
+
             static public DataTable loadRefeições()
             {
                 DAL dal = new DAL();

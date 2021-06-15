@@ -149,7 +149,8 @@ namespace ProjetoTecnológico
                 tabControl.Visible = true;
                 tabControl2.Visible = false;
                 tabControl1.Visible = false;
-                pictureBox1.Visible = false;
+            tabControl3.Visible = false;
+            pictureBox1.Visible = false;
               
             
          
@@ -178,6 +179,7 @@ namespace ProjetoTecnológico
             tabControl.Visible = false;
             tabControl1.Visible = false;
             tabControl2.Visible = true;
+            tabControl3.Visible = false;
             pictureBox1.Visible = false;
         }
 
@@ -1206,6 +1208,15 @@ namespace ProjetoTecnológico
         private void numericUpDown17_Click(object sender, EventArgs e)
         {
             numericUpDown17.ReadOnly = false;
+        }
+
+        private void metroTile5_Click(object sender, EventArgs e)
+        {
+            tabControl.Visible = false;
+            tabControl1.Visible = false;
+            tabControl2.Visible =false;
+            tabControl3.Visible = true;
+            pictureBox1.Visible = false;
         }
     }
 }
