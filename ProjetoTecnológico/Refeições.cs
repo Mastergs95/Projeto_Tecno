@@ -961,8 +961,9 @@ namespace ProjetoTecnológico
                     else
                     {
                         guna2DataGridView1.Rows[pos].Cells[0].Value.ToString();
+                        panel12.Visible = true;
+                        panel12.BringToFront();
 
-                        BLL1.Refeicao.insertPedido("teste", guna2DataGridView1.Rows[pos].Cells[0].Value.ToString(), Globais.pack, Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value), Convert.ToDouble(guna2DataGridView1.Rows[pos].Cells[2].Value), data);
                     }
 
                 }
@@ -1005,6 +1006,7 @@ namespace ProjetoTecnológico
                 { }
                 else
                 {
+                    
                     panel12.Visible = true;
                     panel12.BringToFront();
                 }
@@ -1085,11 +1087,27 @@ namespace ProjetoTecnológico
 
         private void button8_Click(object sender, EventArgs e)
         {
+            if (textBox7.Text == "")
+            {
+                MessageBox.Show("Por favor insira um local para entrega");
+            }
+            else
+            {
+                //insertpedido
+                int hr = dateTimePicker2.Value.Hour;
+                int min = dateTimePicker2.Value.Minute;
+                string hrt = Convert.ToString(hr+":"+min);
+                string dat = dateTimePicker2.Value.Date.ToString();
+                BLL1.Refeicao.insertPedido("teste", dat, hrt, textBox7.Text);
+                //
+                panel12.Visible = false;
+            }
+
             string s = dateTimePicker1.Value.Date.ToString();
             string h = dateTimePicker1.Value.Hour.ToString();
             string t = textBox7.Text;
             guna2DataGridView3.DataSource = BLL1.Refeicao.queryIdP("teste", "14/06/2021");
-            panel12.Visible = false;
+           
         }
     }
 }
