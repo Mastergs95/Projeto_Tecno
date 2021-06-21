@@ -338,10 +338,7 @@ namespace ProjetoTecnológico
 
         }
 
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+      
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
@@ -441,12 +438,12 @@ namespace ProjetoTecnológico
                 label4.Text = Convert.ToString(itens);
                 if (j < 10)
                 {
-
+                    
                     guna2DataGridView1.Rows[j].Cells[0].Value = Globais.prato;
                     guna2DataGridView1.Rows[j].Cells[1].Value = metroLabel1.Text;
                     guna2DataGridView1.Rows[j].Cells[2].Value = preco;
                     guna2DataGridView1.Rows[j].Cells[3].Value = pictureBox6.Image;
-
+                    guna2DataGridView1.Rows[j].Cells[5].Value = id;
                     // guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
                     j += 1;
 
@@ -1042,8 +1039,8 @@ namespace ProjetoTecnológico
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
-          
-             CaptureScreen();
+            
+            CaptureScreen();
             printDocument1.Print();
         }
         private void CaptureScreen()
@@ -1067,15 +1064,17 @@ namespace ProjetoTecnológico
 
         private void metroButton4_Click(object sender, EventArgs e)
         {
-            
-            guna2DataGridView3.DataSource=BLL1.Refeicao.loadPedido();
+           
+
+            //string s = dateTimePicker1.Value.Date.ToString();
+            //string h = dateTimePicker1.Value.Hour.ToString();
+            //string t = textBox7.Text;
+            //guna2DataGridView3.DataSource = BLL1.Refeicao.queryIdP("teste", "21/06/2021");
         }
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
-            String datatd =DateTime.Now.ToString("dd-MM-yyyy");
-            string useri ="teste";
-            guna2DataGridView3.DataSource = BLL1.Refeicao.queryPreco(useri,datatd);
+            
            
             //adiconar painel de obrigado pela sua scolha volte sempre e voltamos para o login- client feito
         }
@@ -1097,17 +1096,97 @@ namespace ProjetoTecnológico
                 int hr = dateTimePicker2.Value.Hour;
                 int min = dateTimePicker2.Value.Minute;
                 string hrt = Convert.ToString(hr+":"+min);
-                string dat = dateTimePicker2.Value.Date.ToString();
+                string dat = dateTimePicker2.Value.ToShortDateString();
                 BLL1.Refeicao.insertPedido("teste", dat, hrt, textBox7.Text);
                 //
+
+                
+                foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+                {
+
+                    int pos = row.Index;
+                    
+                        for (int i = 0; i < itens; i++)
+                        {
+                            int idref = (int)guna2DataGridView1.Rows[pos].Cells[5].Value;
+                            BLL1.Refeicao.insertReforid(28, idref);
+                        }
+                       
+
+                    
+                    
+                }
+
+                String datatd = DateTime.Now.ToString("dd/MM/yyyy");
+                string useri = "teste";
+                guna2DataGridView3.DataSource = BLL1.Refeicao.queryPreco(useri, datatd);
                 panel12.Visible = false;
+                
+               // guna2DataGridView3.DataSource = BLL1.Refeicao.loadPedido();
             }
 
-            string s = dateTimePicker1.Value.Date.ToString();
-            string h = dateTimePicker1.Value.Hour.ToString();
-            string t = textBox7.Text;
-            guna2DataGridView3.DataSource = BLL1.Refeicao.queryIdP("teste", "14/06/2021");
            
+           
+        }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                metroButton3.Enabled = true;
+            }
+            else
+            {
+                metroButton3.Enabled = false;
+            }
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                metroButton3.Enabled = true;
+            }
+            else
+            {
+                metroButton3.Enabled = false;
+            }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                metroButton3.Enabled = true;
+            }
+            else
+            {
+                metroButton3.Enabled = false;
+            }
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                metroButton3.Enabled = true;
+            }
+            else
+            {
+                metroButton3.Enabled = false;
+            }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            {
+                metroButton3.Enabled = true;
+            }
+            else
+            {
+                metroButton3.Enabled = false;
+            }
         }
     }
 }
