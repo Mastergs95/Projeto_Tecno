@@ -1039,9 +1039,14 @@ namespace ProjetoTecnológico
 
         private void metroButton3_Click(object sender, EventArgs e)
         {
+            try
+            {
+                CaptureScreen();
+                printDocument1.Print();
+
+            }catch(Exception l) { }
             
-            CaptureScreen();
-            printDocument1.Print();
+
         }
         private void CaptureScreen()
         {
@@ -1066,17 +1071,12 @@ namespace ProjetoTecnológico
         {
            
 
-            //string s = dateTimePicker1.Value.Date.ToString();
-            //string h = dateTimePicker1.Value.Hour.ToString();
-            //string t = textBox7.Text;
-            //guna2DataGridView3.DataSource = BLL1.Refeicao.queryIdP("teste", "21/06/2021");
         }
 
         private void metroButton5_Click(object sender, EventArgs e)
         {
-            
+
            
-            //adiconar painel de obrigado pela sua scolha volte sempre e voltamos para o login- client feito
         }
 
         private void panel11_Paint(object sender, PaintEventArgs e)
@@ -1095,7 +1095,16 @@ namespace ProjetoTecnológico
                 //insertpedido
                 int hr = dateTimePicker2.Value.Hour;
                 int min = dateTimePicker2.Value.Minute;
-                string hrt = Convert.ToString(hr+":"+min);
+                string hrt;
+                if (min < 10)
+                {
+                    hrt = Convert.ToString(hr + ":0" + min);
+                }
+                else
+                {
+                    hrt = Convert.ToString(hr + ":" + min);
+                }
+                
                 string dat = dateTimePicker2.Value.ToShortDateString();
                 BLL1.Refeicao.insertPedido("teste", dat, hrt, textBox7.Text);
                 //
@@ -1106,17 +1115,26 @@ namespace ProjetoTecnológico
 
                     int pos = row.Index;
                     
-                        for (int i = 0; i < itens; i++)
-                        {
-                            int idref = (int)guna2DataGridView1.Rows[pos].Cells[5].Value;
-                            BLL1.Refeicao.insertReforid(28, idref);
-                        }
-                       
-
-                    
-                    
+                       if (guna2DataGridView1.Rows[pos].Cells[5].Value != null)
+                    {
+                        int idref = (int)guna2DataGridView1.Rows[pos].Cells[5].Value;
+                        BLL1.Refeicao.insertReforid(32, idref);
+                    }
+                           
                 }
+                int precot =0;
+                foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+                {
 
+                    int pos = row.Index;
+
+                    if (guna2DataGridView1.Rows[pos].Cells[2].Value != null)
+                    {
+                        precot += Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[2].Value);
+                        
+                    }
+                }
+                textBox5.Text = Convert.ToString(precot);
                 String datatd = DateTime.Now.ToString("dd/MM/yyyy");
                 string useri = "teste";
                 guna2DataGridView3.DataSource = BLL1.Refeicao.queryPreco(useri, datatd);
@@ -1131,7 +1149,7 @@ namespace ProjetoTecnológico
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            if (textBox1.Text != "" && textBox2.Text.Length == 9 && textBox3.Text.Length == 9 && textBox4.Text != "")
             {
                 metroButton3.Enabled = true;
             }
@@ -1143,7 +1161,7 @@ namespace ProjetoTecnológico
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            if (textBox1.Text != "" && textBox2.Text.Length == 9 && textBox3.Text.Length == 9 && textBox4.Text != "")
             {
                 metroButton3.Enabled = true;
             }
@@ -1155,7 +1173,7 @@ namespace ProjetoTecnológico
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            if (textBox1.Text != "" && textBox2.Text.Length == 9 && textBox3.Text.Length == 9 && textBox4.Text != "")
             {
                 metroButton3.Enabled = true;
             }
@@ -1167,7 +1185,21 @@ namespace ProjetoTecnológico
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
+            if (textBox1.Text != "" && textBox2.Text.Length==9 && textBox3.Text.Length==9  && textBox4.Text != "")
+            {
+                metroButton3.Enabled = true;
+
+            }
+            else
+            {
+                metroButton3.Enabled = false;
+            }
+          
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (textBox1.Text != "" && textBox2.Text.Length == 9 && textBox3.Text.Length == 9 && textBox4.Text != "")
             {
                 metroButton3.Enabled = true;
             }
@@ -1177,16 +1209,9 @@ namespace ProjetoTecnológico
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void metroLabel10_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "" && textBox2.Text != "" && textBox3.Text != "" && textBox4.Text != "")
-            {
-                metroButton3.Enabled = true;
-            }
-            else
-            {
-                metroButton3.Enabled = false;
-            }
+
         }
     }
 }
