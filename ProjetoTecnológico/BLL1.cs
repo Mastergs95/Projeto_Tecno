@@ -79,6 +79,16 @@ namespace BusinessLogicLayer
                 return dal.executarReader("select * from Pedidos where @user=Cliente and @data=data", sqlParams);
             }
 
+            static public DataTable queryPedido(string user, string data)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                new SqlParameter("@user", user),
+                   new SqlParameter("@data", data),
+                };
+                return dal.executarReader("select * from Pedidos where @user=Cliente and @data=data", sqlParams);
+            }
+
             static public DataTable queryIdP(string user, string data)
             {
                 DAL dal = new DAL();
