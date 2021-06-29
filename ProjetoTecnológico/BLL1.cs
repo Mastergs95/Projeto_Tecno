@@ -79,6 +79,26 @@ namespace BusinessLogicLayer
                 return dal.executarReader("select * from Pedidos where @user=Cliente and @data=data", sqlParams);
             }
 
+            static public DataTable queryRefid(int idped,int idref)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                new SqlParameter("@idped",idped),
+                   new SqlParameter("@idref", idref),
+                };
+                return dal.executarReader("select Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco from Pedidos inner join ReforId on ReforId.id_pedido=@idped inner join Refeiçoes on ReforId.id_refeicoes=@idref where ReforId.id_pedido=@idped", sqlParams);
+            }
+
+            static public DataTable queryPedido(string user, string data)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                new SqlParameter("@user", user),
+                   new SqlParameter("@data", data),
+                };
+                return dal.executarReader("select * from Pedidos where @user=Cliente and @data=data", sqlParams);
+            }
+
             static public DataTable queryIdP(string user, string data)
             {
                 DAL dal = new DAL();

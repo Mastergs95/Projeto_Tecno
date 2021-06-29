@@ -30,7 +30,7 @@ namespace ProjetoTecnológico
         byte[] fot;
         int id;
         //Refeiçoes
-        int x = 185;
+        int x = 140;
         int y = 280;
         int p = 140;
         int k = 120;
@@ -165,7 +165,7 @@ namespace ProjetoTecnológico
                     label.Location = new Point(x, y);
                     label.Name = "l" + i;
                     label.Text = row["Nome"].ToString();
-                    label.Size = new Size(100, 30);
+                    label.Size = new Size(200, 50);
                     label.BringToFront();
                     label.Font = new Font("Century Gothic", 12);
                     panel4.Controls.Add(label);
@@ -188,7 +188,7 @@ namespace ProjetoTecnológico
                     px += 300;
                     if (i % 3 == 0)
                     {
-                        x = 185;
+                        x = 140;
                         y += 250;
                         p = 140;
                         k += 250;
@@ -1139,13 +1139,9 @@ namespace ProjetoTecnológico
                 textBox5.Text = Convert.ToString(precot);
                 String datatd = DateTime.Now.ToString("dd/MM/yyyy");
                 string useri = "teste";
-                guna2DataGridView3.DataSource = BLL1.Refeicao.queryPreco(useri, datatd);
+                guna2DataGridView3.DataSource = BLL1.Refeicao.queryRefid(32, 30);
                 panel12.Visible = false;
-                panel10.Controls.Add(guna2DataGridView2);
-                guna2DataGridView2.Visible = true;
-                guna2DataGridView2.BringToFront();
-                guna2DataGridView2.Size= new Size (491, 239);
-                guna2DataGridView2.Location = new Point(50, 50);
+              
                 // guna2DataGridView3.DataSource = BLL1.Refeicao.loadPedido();
             }
 
