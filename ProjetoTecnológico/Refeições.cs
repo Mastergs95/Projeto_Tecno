@@ -1043,9 +1043,11 @@ namespace ProjetoTecnológico
             {
                 CaptureScreen();
                 printDocument1.Print();
-
-            }catch(Exception l) { }
-            
+                
+            }
+            catch(Exception l) { }
+            metroButton4.Enabled = true;
+            metroButton3.Enabled = false;
 
         }
         private void CaptureScreen()
@@ -1139,8 +1141,12 @@ namespace ProjetoTecnológico
                 string useri = "teste";
                 guna2DataGridView3.DataSource = BLL1.Refeicao.queryPreco(useri, datatd);
                 panel12.Visible = false;
-                
-               // guna2DataGridView3.DataSource = BLL1.Refeicao.loadPedido();
+                panel10.Controls.Add(guna2DataGridView2);
+                guna2DataGridView2.Visible = true;
+                guna2DataGridView2.BringToFront();
+                guna2DataGridView2.Size= new Size (491, 239);
+                guna2DataGridView2.Location = new Point(50, 50);
+                // guna2DataGridView3.DataSource = BLL1.Refeicao.loadPedido();
             }
 
            
@@ -1181,6 +1187,15 @@ namespace ProjetoTecnológico
             {
                 metroButton3.Enabled = false;
             }
+            if (textBox3.Text.Length == 9)
+            {
+                label21.Visible = true;
+                label21.BringToFront();
+            }
+            else
+            {
+                label21.Visible = false;
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -1193,6 +1208,15 @@ namespace ProjetoTecnológico
             else
             {
                 metroButton3.Enabled = false;
+            }
+            if (textBox2.Text.Length == 9)
+            {
+                label18.Visible = true;
+                label18.BringToFront();
+            }
+            else
+            {
+                label18.Visible = false;
             }
           
         }
@@ -1212,6 +1236,35 @@ namespace ProjetoTecnológico
         private void metroLabel10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroButton4_Click_1(object sender, EventArgs e)
+        {
+            panel11.Visible = true;
+            panel11.BringToFront();
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox3.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
+            }
         }
     }
 }
