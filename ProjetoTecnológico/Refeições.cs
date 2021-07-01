@@ -477,6 +477,7 @@ namespace ProjetoTecnológico
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             panel5.Visible = false;
 
             metroLabel1.Text = "1";
@@ -1120,7 +1121,8 @@ namespace ProjetoTecnológico
                        if (guna2DataGridView1.Rows[pos].Cells[5].Value != null)
                     {
                         int idref = (int)guna2DataGridView1.Rows[pos].Cells[5].Value;
-                        BLL1.Refeicao.insertReforid(32, idref);
+                        int qta= Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value);
+                        BLL1.Refeicao.insertReforid(32, idref,qta);
                     }
                            
                 }

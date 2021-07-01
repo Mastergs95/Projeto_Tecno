@@ -38,17 +38,17 @@ namespace BusinessLogicLayer
                 return dal.executarNonQuery("INSERT into Pedidos (Cliente,data,hora,local) VALUES (@Cliente,@data,@hora,@local)", sqlParams);
             }
 
-            static public int insertReforid(int Id_pedido, int id_refeicoes)
+            static public int insertReforid(int Id_pedido, int id_refeicoes,int quantidade)
             {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{
 
                 new SqlParameter("@Id_pedido", Id_pedido),
                 new SqlParameter("@id_refeicoes",id_refeicoes ),
-              
+               new SqlParameter("@quantidade",quantidade ),
 
             };
-                return dal.executarNonQuery("INSERT into ReforId (Id_pedido,id_refeicoes) VALUES (@Id_pedido,@id_refeicoes )", sqlParams);
+                return dal.executarNonQuery("INSERT into ReforId (Id_pedido,id_refeicoes,quantidade) VALUES (@Id_pedido,@id_refeicoes,@quantidade )", sqlParams);
             }
             static public int insertPacks(string nome, string prato, string sobremesa,byte[]foto,double preco)
             {
@@ -86,7 +86,7 @@ namespace BusinessLogicLayer
                 new SqlParameter("@idped",idped),
                    new SqlParameter("@idref", idref),
                 };
-                return dal.executarReader("select Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco from Pedidos inner join ReforId on ReforId.id_pedido=@idped inner join Refeiçoes on ReforId.id_refeicoes=@idref where ReforId.id_pedido=@idped", sqlParams);
+                return dal.executarReader("select Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco from Pedidos inner join ReforId on ReforId.id_pedido=@idped inner join Refeiçoes on ReforId.id_refeicoes=@idref where ReforId.id_pedido=@idped and ReforId.id_refeicoes=@idref ", sqlParams);
             }
 
             static public DataTable queryPedido(string user, string data)
