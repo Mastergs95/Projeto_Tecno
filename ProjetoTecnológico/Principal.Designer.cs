@@ -62,29 +62,6 @@ namespace ProjetoTecnológico
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.tabControl = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.metroButton12 = new MetroFramework.Controls.MetroButton();
-            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.numericUpDown14 = new System.Windows.Forms.NumericUpDown();
             this.label33 = new System.Windows.Forms.Label();
@@ -132,6 +109,29 @@ namespace ProjetoTecnológico
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.numericUpDown13 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.metroButton12 = new MetroFramework.Controls.MetroButton();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.metroButton1 = new MetroFramework.Controls.MetroButton();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.guna2DataGridView4 = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -211,21 +211,14 @@ namespace ProjetoTecnológico
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.guna2DataGridView8 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.metroButton15 = new MetroFramework.Controls.MetroButton();
             this.label41 = new System.Windows.Forms.Label();
             this.metroLabel28 = new MetroFramework.Controls.MetroLabel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.tabControl.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView5)).BeginInit();
@@ -242,6 +235,13 @@ namespace ProjetoTecnológico
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView4)).BeginInit();
@@ -452,364 +452,6 @@ namespace ProjetoTecnológico
             this.tabControl.Size = new System.Drawing.Size(1068, 653);
             this.tabControl.TabIndex = 17;
             this.tabControl.Visible = false;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.tabPage1.BackgroundImage = global::ProjetoTecnológico.Properties.Resources.background;
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.numericUpDown13);
-            this.tabPage1.Controls.Add(this.label2);
-            this.tabPage1.Controls.Add(this.label32);
-            this.tabPage1.Controls.Add(this.pictureBox7);
-            this.tabPage1.Controls.Add(this.metroButton12);
-            this.tabPage1.Controls.Add(this.metroProgressBar1);
-            this.tabPage1.Controls.Add(this.numericUpDown4);
-            this.tabPage1.Controls.Add(this.numericUpDown3);
-            this.tabPage1.Controls.Add(this.numericUpDown2);
-            this.tabPage1.Controls.Add(this.numericUpDown1);
-            this.tabPage1.Controls.Add(this.label20);
-            this.tabPage1.Controls.Add(this.label19);
-            this.tabPage1.Controls.Add(this.label18);
-            this.tabPage1.Controls.Add(this.label17);
-            this.tabPage1.Controls.Add(this.label16);
-            this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.metroButton1);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.label5);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1060, 620);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Adicionar Refeições";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // numericUpDown13
-            // 
-            this.numericUpDown13.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown13.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown13.DecimalPlaces = 2;
-            this.numericUpDown13.Location = new System.Drawing.Point(693, 236);
-            this.numericUpDown13.Name = "numericUpDown13";
-            this.numericUpDown13.ReadOnly = true;
-            this.numericUpDown13.Size = new System.Drawing.Size(190, 28);
-            this.numericUpDown13.TabIndex = 29;
-            this.numericUpDown13.Value = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
-            this.numericUpDown13.Click += new System.EventHandler(this.numericUpDown13_Click);
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(889, 240);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(16, 20);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "€";
-            // 
-            // label32
-            // 
-            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label32.AutoSize = true;
-            this.label32.BackColor = System.Drawing.Color.Transparent;
-            this.label32.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(609, 235);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(63, 21);
-            this.label32.TabIndex = 27;
-            this.label32.Text = "Preço";
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Location = new System.Drawing.Point(693, 291);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(190, 115);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox7.TabIndex = 26;
-            this.pictureBox7.TabStop = false;
-            // 
-            // metroButton12
-            // 
-            this.metroButton12.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.metroButton12.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton12.ForeColor = System.Drawing.Color.MediumPurple;
-            this.metroButton12.Location = new System.Drawing.Point(711, 428);
-            this.metroButton12.Name = "metroButton12";
-            this.metroButton12.Size = new System.Drawing.Size(154, 28);
-            this.metroButton12.TabIndex = 25;
-            this.metroButton12.Text = "Selecionar Foto";
-            this.metroButton12.UseCustomBackColor = true;
-            this.metroButton12.UseCustomForeColor = true;
-            this.metroButton12.UseSelectable = true;
-            this.metroButton12.Click += new System.EventHandler(this.metroButton12_Click);
-            // 
-            // metroProgressBar1
-            // 
-            this.metroProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroProgressBar1.Location = new System.Drawing.Point(398, 528);
-            this.metroProgressBar1.Maximum = 1000;
-            this.metroProgressBar1.Name = "metroProgressBar1";
-            this.metroProgressBar1.Size = new System.Drawing.Size(404, 26);
-            this.metroProgressBar1.Step = 5;
-            this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Purple;
-            this.metroProgressBar1.TabIndex = 24;
-            this.metroProgressBar1.Visible = false;
-            // 
-            // numericUpDown4
-            // 
-            this.numericUpDown4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown4.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown4.DecimalPlaces = 2;
-            this.numericUpDown4.Location = new System.Drawing.Point(693, 158);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.ReadOnly = true;
-            this.numericUpDown4.Size = new System.Drawing.Size(190, 28);
-            this.numericUpDown4.TabIndex = 23;
-            this.numericUpDown4.Value = new decimal(new int[] {
-            209,
-            0,
-            0,
-            65536});
-            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
-            this.numericUpDown4.Click += new System.EventHandler(this.numericUpDown4_Click);
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown3.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown3.DecimalPlaces = 2;
-            this.numericUpDown3.Location = new System.Drawing.Point(693, 71);
-            this.numericUpDown3.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.ReadOnly = true;
-            this.numericUpDown3.Size = new System.Drawing.Size(190, 28);
-            this.numericUpDown3.TabIndex = 22;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            3266,
-            0,
-            0,
-            131072});
-            this.numericUpDown3.Click += new System.EventHandler(this.numericUpDown3_Click);
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown2.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown2.DecimalPlaces = 2;
-            this.numericUpDown2.Location = new System.Drawing.Point(302, 355);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.ReadOnly = true;
-            this.numericUpDown2.Size = new System.Drawing.Size(189, 28);
-            this.numericUpDown2.TabIndex = 21;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            666,
-            0,
-            0,
-            131072});
-            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
-            this.numericUpDown2.Click += new System.EventHandler(this.numericUpDown2_Click);
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.numericUpDown1.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Location = new System.Drawing.Point(302, 257);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            9999,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(189, 28);
-            this.numericUpDown1.TabIndex = 20;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            282,
-            0,
-            0,
-            0});
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
-            this.numericUpDown1.Click += new System.EventHandler(this.numericUpDown1_Click);
-            // 
-            // label20
-            // 
-            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label20.AutoSize = true;
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Location = new System.Drawing.Point(889, 160);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(27, 21);
-            this.label20.TabIndex = 19;
-            this.label20.Text = "gr";
-            // 
-            // label19
-            // 
-            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label19.AutoSize = true;
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(889, 76);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(27, 21);
-            this.label19.TabIndex = 18;
-            this.label19.Text = "gr";
-            this.label19.Click += new System.EventHandler(this.label19_Click);
-            // 
-            // label18
-            // 
-            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(492, 355);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(27, 21);
-            this.label18.TabIndex = 17;
-            this.label18.Text = "gr";
-            // 
-            // label17
-            // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(593, 158);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(96, 21);
-            this.label17.TabIndex = 11;
-            this.label17.Text = "Proteínas";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.AutoSize = true;
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(197, 355);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(72, 21);
-            this.label16.TabIndex = 9;
-            this.label16.Text = "Lípidos";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(568, 72);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(121, 21);
-            this.label15.TabIndex = 7;
-            this.label15.Text = "Carboidratos";
-            // 
-            // metroButton1
-            // 
-            this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.metroButton1.BackColor = System.Drawing.Color.Transparent;
-            this.metroButton1.Enabled = false;
-            this.metroButton1.ForeColor = System.Drawing.Color.MediumPurple;
-            this.metroButton1.Location = new System.Drawing.Point(487, 465);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(214, 38);
-            this.metroButton1.TabIndex = 6;
-            this.metroButton1.Text = "Adicionar ";
-            this.metroButton1.UseCustomBackColor = true;
-            this.metroButton1.UseCustomForeColor = true;
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
-            // 
-            // textBox3
-            // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(302, 162);
-            this.textBox3.MaxLength = 20;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.ReadOnly = true;
-            this.textBox3.Size = new System.Drawing.Size(189, 28);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.Text = "Ex: Vegana";
-            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BackColor = System.Drawing.Color.LavenderBlush;
-            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(302, 73);
-            this.textBox1.MaxLength = 35;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(189, 28);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Ex: Arroz de marisco";
-            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(189, 257);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Calorias\r\n";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(118, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(157, 21);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Tipo de Refeição\r\n";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(202, 73);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 19);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Nome";
             // 
             // tabPage2
             // 
@@ -1552,6 +1194,364 @@ namespace ProjetoTecnológico
             this.label26.Size = new System.Drawing.Size(60, 21);
             this.label26.TabIndex = 16;
             this.label26.Text = "Nome";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.tabPage1.BackgroundImage = global::ProjetoTecnológico.Properties.Resources.background;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.numericUpDown13);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label32);
+            this.tabPage1.Controls.Add(this.pictureBox7);
+            this.tabPage1.Controls.Add(this.metroButton12);
+            this.tabPage1.Controls.Add(this.metroProgressBar1);
+            this.tabPage1.Controls.Add(this.numericUpDown4);
+            this.tabPage1.Controls.Add(this.numericUpDown3);
+            this.tabPage1.Controls.Add(this.numericUpDown2);
+            this.tabPage1.Controls.Add(this.numericUpDown1);
+            this.tabPage1.Controls.Add(this.label20);
+            this.tabPage1.Controls.Add(this.label19);
+            this.tabPage1.Controls.Add(this.label18);
+            this.tabPage1.Controls.Add(this.label17);
+            this.tabPage1.Controls.Add(this.label16);
+            this.tabPage1.Controls.Add(this.label15);
+            this.tabPage1.Controls.Add(this.metroButton1);
+            this.tabPage1.Controls.Add(this.textBox3);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1060, 620);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Adicionar Refeições";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
+            // numericUpDown13
+            // 
+            this.numericUpDown13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown13.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown13.DecimalPlaces = 2;
+            this.numericUpDown13.Location = new System.Drawing.Point(693, 236);
+            this.numericUpDown13.Name = "numericUpDown13";
+            this.numericUpDown13.ReadOnly = true;
+            this.numericUpDown13.Size = new System.Drawing.Size(190, 28);
+            this.numericUpDown13.TabIndex = 29;
+            this.numericUpDown13.Value = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.numericUpDown13.ValueChanged += new System.EventHandler(this.numericUpDown13_ValueChanged);
+            this.numericUpDown13.Click += new System.EventHandler(this.numericUpDown13_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(889, 240);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(16, 20);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "€";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label32.AutoSize = true;
+            this.label32.BackColor = System.Drawing.Color.Transparent;
+            this.label32.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(609, 235);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(63, 21);
+            this.label32.TabIndex = 27;
+            this.label32.Text = "Preço";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.Location = new System.Drawing.Point(693, 291);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(190, 115);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox7.TabIndex = 26;
+            this.pictureBox7.TabStop = false;
+            // 
+            // metroButton12
+            // 
+            this.metroButton12.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.metroButton12.BackColor = System.Drawing.Color.Transparent;
+            this.metroButton12.ForeColor = System.Drawing.Color.MediumPurple;
+            this.metroButton12.Location = new System.Drawing.Point(711, 428);
+            this.metroButton12.Name = "metroButton12";
+            this.metroButton12.Size = new System.Drawing.Size(154, 28);
+            this.metroButton12.TabIndex = 25;
+            this.metroButton12.Text = "Selecionar Foto";
+            this.metroButton12.UseCustomBackColor = true;
+            this.metroButton12.UseCustomForeColor = true;
+            this.metroButton12.UseSelectable = true;
+            this.metroButton12.Click += new System.EventHandler(this.metroButton12_Click);
+            // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.metroProgressBar1.Location = new System.Drawing.Point(398, 528);
+            this.metroProgressBar1.Maximum = 1000;
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.Size = new System.Drawing.Size(404, 26);
+            this.metroProgressBar1.Step = 5;
+            this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Purple;
+            this.metroProgressBar1.TabIndex = 24;
+            this.metroProgressBar1.Visible = false;
+            // 
+            // numericUpDown4
+            // 
+            this.numericUpDown4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown4.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown4.DecimalPlaces = 2;
+            this.numericUpDown4.Location = new System.Drawing.Point(693, 158);
+            this.numericUpDown4.Name = "numericUpDown4";
+            this.numericUpDown4.ReadOnly = true;
+            this.numericUpDown4.Size = new System.Drawing.Size(190, 28);
+            this.numericUpDown4.TabIndex = 23;
+            this.numericUpDown4.Value = new decimal(new int[] {
+            209,
+            0,
+            0,
+            65536});
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
+            this.numericUpDown4.Click += new System.EventHandler(this.numericUpDown4_Click);
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown3.DecimalPlaces = 2;
+            this.numericUpDown3.Location = new System.Drawing.Point(693, 71);
+            this.numericUpDown3.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.ReadOnly = true;
+            this.numericUpDown3.Size = new System.Drawing.Size(190, 28);
+            this.numericUpDown3.TabIndex = 22;
+            this.numericUpDown3.Value = new decimal(new int[] {
+            3266,
+            0,
+            0,
+            131072});
+            this.numericUpDown3.Click += new System.EventHandler(this.numericUpDown3_Click);
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown2.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown2.DecimalPlaces = 2;
+            this.numericUpDown2.Location = new System.Drawing.Point(302, 355);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.ReadOnly = true;
+            this.numericUpDown2.Size = new System.Drawing.Size(189, 28);
+            this.numericUpDown2.TabIndex = 21;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            666,
+            0,
+            0,
+            131072});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
+            this.numericUpDown2.Click += new System.EventHandler(this.numericUpDown2_Click);
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericUpDown1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Location = new System.Drawing.Point(302, 257);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            9999,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(189, 28);
+            this.numericUpDown1.TabIndex = 20;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            282,
+            0,
+            0,
+            0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
+            this.numericUpDown1.Click += new System.EventHandler(this.numericUpDown1_Click);
+            // 
+            // label20
+            // 
+            this.label20.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label20.AutoSize = true;
+            this.label20.BackColor = System.Drawing.Color.Transparent;
+            this.label20.Location = new System.Drawing.Point(889, 160);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(27, 21);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "gr";
+            // 
+            // label19
+            // 
+            this.label19.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label19.AutoSize = true;
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Location = new System.Drawing.Point(889, 76);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(27, 21);
+            this.label19.TabIndex = 18;
+            this.label19.Text = "gr";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
+            // 
+            // label18
+            // 
+            this.label18.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Location = new System.Drawing.Point(492, 355);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(27, 21);
+            this.label18.TabIndex = 17;
+            this.label18.Text = "gr";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(593, 158);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(96, 21);
+            this.label17.TabIndex = 11;
+            this.label17.Text = "Proteínas";
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(197, 355);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 21);
+            this.label16.TabIndex = 9;
+            this.label16.Text = "Lípidos";
+            // 
+            // label15
+            // 
+            this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(568, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(121, 21);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Carboidratos";
+            // 
+            // metroButton1
+            // 
+            this.metroButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.metroButton1.BackColor = System.Drawing.Color.Transparent;
+            this.metroButton1.Enabled = false;
+            this.metroButton1.ForeColor = System.Drawing.Color.MediumPurple;
+            this.metroButton1.Location = new System.Drawing.Point(487, 465);
+            this.metroButton1.Name = "metroButton1";
+            this.metroButton1.Size = new System.Drawing.Size(214, 38);
+            this.metroButton1.TabIndex = 6;
+            this.metroButton1.Text = "Adicionar ";
+            this.metroButton1.UseCustomBackColor = true;
+            this.metroButton1.UseCustomForeColor = true;
+            this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click_1);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox3.BackColor = System.Drawing.Color.LavenderBlush;
+            this.textBox3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(302, 162);
+            this.textBox3.MaxLength = 20;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(189, 28);
+            this.textBox3.TabIndex = 5;
+            this.textBox3.Text = "Ex: Vegana";
+            this.textBox3.Click += new System.EventHandler(this.textBox3_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BackColor = System.Drawing.Color.LavenderBlush;
+            this.textBox1.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(302, 73);
+            this.textBox1.MaxLength = 35;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(189, 28);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Ex: Arroz de marisco";
+            this.textBox1.Click += new System.EventHandler(this.textBox1_Click);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(189, 257);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(80, 21);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Calorias\r\n";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(118, 162);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(157, 21);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Tipo de Refeição\r\n";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.label3.Font = new System.Drawing.Font("MS UI Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(202, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 19);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nome";
             // 
             // tabControl1
             // 
@@ -2868,6 +2868,15 @@ namespace ProjetoTecnológico
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "Atividade";
             this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabPage8.Click += new System.EventHandler(this.tabPage8_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(152, 79);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(161, 27);
+            this.comboBox1.TabIndex = 91;
             // 
             // guna2DataGridView8
             // 
@@ -2968,14 +2977,6 @@ namespace ProjetoTecnológico
             this.metroLabel28.Text = "Procurar por:";
             this.metroLabel28.UseCustomBackColor = true;
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(152, 79);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(161, 27);
-            this.comboBox1.TabIndex = 91;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3000,14 +3001,6 @@ namespace ProjetoTecnológico
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.tabControl.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown14)).EndInit();
@@ -3026,6 +3019,14 @@ namespace ProjetoTecnológico
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown12)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();

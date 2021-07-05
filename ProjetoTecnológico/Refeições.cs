@@ -110,7 +110,7 @@ namespace ProjetoTecnológico
             panel7.Visible = false;
             metroTile1.Enabled = false;
             metroTile4.Enabled = true;
-            pedido += 1;
+            pedido += 4;
             Globais.idpedido = pedido;
             if (vz == true)
             {
@@ -1109,7 +1109,7 @@ namespace ProjetoTecnológico
                 }
                 
                 string dat = dateTimePicker2.Value.ToShortDateString();
-                BLL1.Refeicao.insertPedido("teste", dat, hrt, textBox7.Text);
+                BLL1.Refeicao.insertPedido(Globais.idpedido,"teste", dat, hrt, textBox7.Text);
                 //
 
                 
@@ -1122,7 +1122,7 @@ namespace ProjetoTecnológico
                     {
                         int idref = (int)guna2DataGridView1.Rows[pos].Cells[5].Value;
                         int qta= Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value);
-                        BLL1.Refeicao.insertReforid(32, idref,qta);
+                        BLL1.Refeicao.insertReforid(Globais.idpedido, idref,qta);
                     }
                            
                 }
@@ -1141,7 +1141,7 @@ namespace ProjetoTecnológico
                 textBox5.Text = Convert.ToString(precot);
                 String datatd = DateTime.Now.ToString("dd/MM/yyyy");
                 string useri = "teste";
-                guna2DataGridView3.DataSource = BLL1.Refeicao.queryRefid(32, 30);
+                guna2DataGridView3.DataSource = BLL1.Refeicao.queryRefid(Globais.idpedido, 30);
                 panel12.Visible = false;
               
                 // guna2DataGridView3.DataSource = BLL1.Refeicao.loadPedido();
@@ -1238,7 +1238,9 @@ namespace ProjetoTecnológico
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            Login l1 = new Login();
+            l1.Show();
+            this.Hide();
         }
 
         private void metroButton4_Click_1(object sender, EventArgs e)
@@ -1263,6 +1265,11 @@ namespace ProjetoTecnológico
                 MessageBox.Show("Please enter only numbers.");
                 textBox3.Text = textBox3.Text.Remove(textBox3.Text.Length - 1);
             }
+        }
+
+        private void panel11_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -75,8 +75,8 @@ namespace ProjetoTecnológico
         {
             password = getHashSha256(textBox2.Text);
             dt = BLL1.Logins.queryLogin(password, textBox1.Text);
-            //adm = (bool)dt.Rows[0][2];
-            //Globais.admin = adm;
+            adm = (bool)dt.Rows[0][2];
+            Globais.admin = adm;
 
             if (textBox1.Text == "" || textBox2.Text == "")
             {
@@ -127,11 +127,11 @@ namespace ProjetoTecnológico
 
                     Globais.user = textBox1.Text;
                     toolStripProgressBar1.Visible = true;
-                    for (int i = 1; i <= 10000; i++)
+                    for (int i = 1; i <= 1000; i++)
                     {
                             toolStripProgressBar1.PerformStep();
                     }
-                    if (toolStripProgressBar1.Value == 500)
+                    if (toolStripProgressBar1.Value == 1000)
                     {
                         toolStripStatusLabel1.Text = "Doringo Application";
                         MetroFramework.MetroMessageBox.Show(this, "\n\nPressione OK para continuar", "Bem Vindo á DorinGo", MessageBoxButtons.OK, MessageBoxIcon.Question);
@@ -139,7 +139,7 @@ namespace ProjetoTecnológico
                         textBox2.Clear();
                         toolStripProgressBar1.Visible = false;
                         Globais.admin = false;
-                        Principal f3 = new Principal();
+                        Refeições f3 = new Refeições();
                         f3.Show();
                         this.Hide();
                     }

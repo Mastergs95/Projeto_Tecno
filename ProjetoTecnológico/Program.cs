@@ -16,7 +16,7 @@ namespace ProjetoTecnológico
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Refeições());
+            Application.Run(new Login());
         }
     }
 }

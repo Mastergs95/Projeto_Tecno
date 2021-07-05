@@ -1218,6 +1218,11 @@ namespace ProjetoTecnológico
             tabControl3.Visible = true;
             pictureBox1.Visible = false;
         }
+
+        private void tabPage8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
