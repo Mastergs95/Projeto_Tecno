@@ -73,10 +73,14 @@ namespace ProjetoTecnológico
 
         private void button1_Click(object sender, EventArgs e)
         {
-            password = getHashSha256(textBox2.Text);
-            dt = BLL1.Logins.queryLogin(password, textBox1.Text);
-            adm = (bool)dt.Rows[0][2];
-            Globais.admin = adm;
+           
+                password = getHashSha256(textBox2.Text);
+                dt = BLL1.Logins.queryLogin(password, textBox1.Text);
+              //  adm = (bool)dt.Rows[0][2];
+               // Globais.admin = adm;
+      
+           
+
 
             if (textBox1.Text == "" || textBox2.Text == "")
             {
@@ -146,6 +150,11 @@ namespace ProjetoTecnológico
                 }
 
             }
+            else
+            {
+                MetroFramework.MetroMessageBox.Show(this, "\n\nUsername ou Password Incorretos", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                
+            }
         }
            
         
@@ -167,7 +176,7 @@ namespace ProjetoTecnológico
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("doringooficial@hotmail.com");
+            System.Diagnostics.Process.Start("https://mastergs95.github.io/");
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
@@ -205,6 +214,9 @@ namespace ProjetoTecnológico
 
             Form3 f3 = new Form3();
             f3.Show();
+            Globais.user = "as";
+            DataTable tb = BLL1.Logins.SelectCliente(Globais.user);
+
             pictureBox11.Enabled = false;
            
 

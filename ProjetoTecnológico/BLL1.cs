@@ -24,18 +24,28 @@ namespace BusinessLogicLayer
                 return dal.executarScalar("select Img from Imagem where id=1", sqlParams);
             
             }
-            static public int insertPedido(int id_pedido,string Cliente, string data, string hora, string local)
+
+            static public object querymaxid()
             {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{
-               new SqlParameter("@id_pedido", id_pedido),
+               
+             };
+                return dal.executarScalar("select max(id_pedido) from Pedidos", sqlParams);
+
+            }
+            static public int insertPedido(string Cliente, string data, string hora, string local)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+               
                 new SqlParameter("@Cliente", Cliente),
                 new SqlParameter("@data", data),
                 new SqlParameter("@hora", hora),
                   new SqlParameter("@local", local),
 
             };
-                return dal.executarNonQuery("INSERT into Pedidos (id_pedido,Cliente,data,hora,local) VALUES (@id_pedido,@Cliente,@data,@hora,@local)", sqlParams);
+                return dal.executarNonQuery("INSERT into Pedidos (Cliente,data,hora,local) VALUES (@Cliente,@data,@hora,@local)", sqlParams);
             }
 
             static public int insertReforid(int Id_pedido, int id_refeicoes,int quantidade)
@@ -86,7 +96,10 @@ namespace BusinessLogicLayer
                 new SqlParameter("@idped",idped),
                    new SqlParameter("@idref", idref),
                 };
-                return dal.executarReader("select Pedidos.Id_pedido, Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco from Pedidos inner join ReforId on @idped = Pedidos.id_pedido inner join Refeiçoes on ReforId.id_refeicoes = Refeiçoes.Id_refeicao", sqlParams);
+              // return dal.executarReader("select Pedidos.Id_pedido, Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco from Pedidos inner join ReforId on Pedidos.id_pedido=@idped  inner join Refeiçoes on ReforId.id_refeicoes = Refeiçoes.Id_refeicao", sqlParams);
+               return dal.executarReader("select Pedidos.Id_pedido, Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco,Reforid.quantidade from Pedidos inner join ReforId on Pedidos.id_pedido=@idped  inner join Refeiçoes on ReforId.id_refeicoes = Refeiçoes.Id_refeicao where Reforid.id_pedido=@idped", sqlParams);
+               
+
             }
 
             static public DataTable queryPedido(string user, string data)
@@ -306,6 +319,15 @@ namespace BusinessLogicLayer
                 new SqlParameter("@nome", nome + "%")
                 };
                 return dal.executarReader("select * from Clientes where Nome like @nome", sqlParams);
+            }
+
+            static public DataTable SelectCliente(String Usuario)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                new SqlParameter("@Usuario", Usuario),
+                };
+                return dal.executarReader("select * from Cliente where Usuario=@Usuario", sqlParams);
             }
             static public DataTable queryCliente(int id) {
                 DAL dal = new DAL();

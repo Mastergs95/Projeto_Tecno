@@ -110,8 +110,7 @@ namespace ProjetoTecnológico
             panel7.Visible = false;
             metroTile1.Enabled = false;
             metroTile4.Enabled = true;
-            pedido += 4;
-            Globais.idpedido = pedido;
+            
             if (vz == true)
             {
 
@@ -314,6 +313,10 @@ namespace ProjetoTecnológico
                     fr.Show();
                 }
                 this.Close();
+                foreach (DataGridViewRow row in guna2DataGridView3.Rows)
+                {
+                    guna2DataGridView3.Rows.RemoveAt(row.Index);
+                }
             }
             else if (result == DialogResult.No)
             {
@@ -441,7 +444,8 @@ namespace ProjetoTecnológico
                     
                     guna2DataGridView1.Rows[j].Cells[0].Value = Globais.prato;
                     guna2DataGridView1.Rows[j].Cells[1].Value = metroLabel1.Text;
-                    guna2DataGridView1.Rows[j].Cells[2].Value = preco;
+                    int qunti = Convert.ToInt32(metroLabel1.Text);
+                    guna2DataGridView1.Rows[j].Cells[2].Value = preco*qunti;
                     guna2DataGridView1.Rows[j].Cells[3].Value = pictureBox6.Image;
                     guna2DataGridView1.Rows[j].Cells[5].Value = id;
                     // guna2DataGridView1.Rows[j].Cells[4].Value = Image.FromFile(@"C:\Users\119190\Desktop\pt\Images\icon_lixo.png");
@@ -1004,16 +1008,15 @@ namespace ProjetoTecnológico
                 { }
                 else
                 {
-                    
                     panel12.Visible = true;
                     panel12.BringToFront();
                 }
 
             }
-            
-            
-           
-          
+
+
+
+
 
 
 
@@ -1089,6 +1092,7 @@ namespace ProjetoTecnológico
 
         private void button8_Click(object sender, EventArgs e)
         {
+            
             if (textBox7.Text == "")
             {
                 MessageBox.Show("Por favor insira um local para entrega");
@@ -1109,10 +1113,10 @@ namespace ProjetoTecnológico
                 }
                 
                 string dat = dateTimePicker2.Value.ToShortDateString();
-                BLL1.Refeicao.insertPedido(Globais.idpedido,"teste", dat, hrt, textBox7.Text);
+                BLL1.Refeicao.insertPedido("teste", dat, hrt, textBox7.Text);
                 //
+                Globais.idpedido = (int)BLL1.Refeicao.querymaxid();
 
-                
                 foreach (DataGridViewRow row in guna2DataGridView1.Rows)
                 {
 
@@ -1122,6 +1126,7 @@ namespace ProjetoTecnológico
                     {
                         int idref = (int)guna2DataGridView1.Rows[pos].Cells[5].Value;
                         int qta= Convert.ToInt32(guna2DataGridView1.Rows[pos].Cells[1].Value);
+                       
                         BLL1.Refeicao.insertReforid(Globais.idpedido, idref,qta);
                     }
                            
@@ -1143,7 +1148,6 @@ namespace ProjetoTecnológico
                 string useri = "teste";
                 guna2DataGridView3.DataSource = BLL1.Refeicao.queryRefid(Globais.idpedido, 30);
                 panel12.Visible = false;
-              
                 // guna2DataGridView3.DataSource = BLL1.Refeicao.loadPedido();
             }
 
@@ -1268,6 +1272,17 @@ namespace ProjetoTecnológico
         }
 
         private void panel11_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel9_Click(object sender, EventArgs e)
+        {
+            Form3 f3 = new Form3();
+            f3.Show();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
