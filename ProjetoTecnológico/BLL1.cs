@@ -311,6 +311,22 @@ namespace BusinessLogicLayer
                 return dal.executarNonQuery("INSERT into Funcionário (Nome,Telefone,Email,NIF,Morada,Usuario) VALUES(@Nome,@Telefone,@Email,@NIF,@Morada,@Usuario)", sqlParams);
             }
 
+            static public int insertCliente(string Nome, string Telefone, string Email, string NIB, string Usuario)
+            {
+
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                 new SqlParameter("@usuario", Usuario),
+                new SqlParameter("@Nome", Nome),
+                new SqlParameter("@Telefone", Telefone),
+                new SqlParameter("@NIB", NIB),
+                new SqlParameter("@Email", Email),
+            
+
+           };
+                return dal.executarNonQuery("INSERT into Cliente (Usuario,Nome,Telefone,NIB,Email) VALUES(@Usuario,@Nome,@Telefone,@NIB,@Email)", sqlParams);
+            }
+
 
             static public DataTable Selectresults(String nome)
             {
@@ -329,6 +345,8 @@ namespace BusinessLogicLayer
                 };
                 return dal.executarReader("select * from Cliente where Usuario=@Usuario", sqlParams);
             }
+
+         
             static public DataTable queryCliente(int id) {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{
@@ -340,11 +358,20 @@ namespace BusinessLogicLayer
             {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{
-                
+               
                 };
-                return dal.executarReader("select * from Funcionário ", sqlParams);
+                return dal.executarReader("select * from Funcionário  ", sqlParams);
             }
-                static public DataTable queryLogin(string password, string usuario)
+
+            static public DataTable selectFunc(string Usuario)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                    new SqlParameter("@Usuario", Usuario),
+                };
+                return dal.executarReader("select * from Funcionário where Usuario=@Usuario ", sqlParams);
+            }
+            static public DataTable queryLogin(string password, string usuario)
             {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{

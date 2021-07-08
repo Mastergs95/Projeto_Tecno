@@ -212,10 +212,7 @@ namespace ProjetoTecnológico
         private void pictureBox11_Click(object sender, EventArgs e)
         {
 
-            Form3 f3 = new Form3();
-            f3.Show();
-            Globais.user = "as";
-            DataTable tb = BLL1.Logins.SelectCliente(Globais.user);
+            MessageBox.Show("Copyright © DorinGo. All rights reserved.", "DorinGo");
 
             pictureBox11.Enabled = false;
            

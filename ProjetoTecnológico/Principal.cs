@@ -82,6 +82,7 @@ namespace ProjetoTecnológico
             //pictureBox3.Image.RotateFlip(RotateFlipType.Rotate180FlipNone);
             pictureBox4.ImageLocation = System.Windows.Forms.Application.StartupPath + @"\default.png";
             pictureBox7.ImageLocation = System.Windows.Forms.Application.StartupPath + @"\default.png";
+            pictureBox5.ImageLocation = System.Windows.Forms.Application.StartupPath + @"\default.png";
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -809,6 +810,7 @@ namespace ProjetoTecnológico
                 textBox19.Clear();
                 numericUpDown17.Value = 0;
                 guna2DataGridView1.DataSource = BLL1.Refeicao.loadPacks();
+                guna2DataGridView2.DataSource = BLL1.Refeicao.loadPacks();
 
             }
             if (textBox16.Text == "" || textBox20.Text == "" || textBox19.Text == "" || numericUpDown17.Value==0)
@@ -964,7 +966,7 @@ namespace ProjetoTecnológico
                 textBox19.Text = guna2DataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
                 foto_array = (byte[])guna2DataGridView2.Rows[e.RowIndex].Cells[4].Value;
                 pictureBox6.Image = byteArrayToImage(foto_array);
-                numericUpDown17.Value = Convert.ToDecimal(guna2DataGridView5.Rows[e.RowIndex].Cells[5].Value);
+                numericUpDown17.Value = Convert.ToDecimal(guna2DataGridView2.Rows[e.RowIndex].Cells[5].Value);
                 metroButton9.Enabled = true;
             }
 
@@ -987,7 +989,7 @@ namespace ProjetoTecnológico
                 textBox22.Text = guna2DataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
                 foto_array = (byte[])guna2DataGridView2.Rows[e.RowIndex].Cells[4].Value;
                 pictureBox6.Image = byteArrayToImage(foto_array);
-                numericUpDown18.Value = Convert.ToDecimal(guna2DataGridView5.Rows[e.RowIndex].Cells[5].Value);
+                numericUpDown18.Value = Convert.ToDecimal(guna2DataGridView2.Rows[e.RowIndex].Cells[5].Value);
                 metroButton9.Enabled = true;
             }
 
@@ -1126,8 +1128,8 @@ namespace ProjetoTecnológico
 
         private void toolStripStatusLabel9_Click(object sender, EventArgs e)
         {
-            Form3 f3 = new Form3();
-            f3.Show();
+            Form4 f4 = new Form4();
+            f4.Show();
         }
 
         private void numericUpDown4_ValueChanged(object sender, EventArgs e)
@@ -1220,6 +1222,11 @@ namespace ProjetoTecnológico
         }
 
         private void tabPage8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage6_Click(object sender, EventArgs e)
         {
 
         }

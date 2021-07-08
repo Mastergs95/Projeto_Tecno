@@ -1249,6 +1249,7 @@ namespace ProjetoTecnológico
 
         private void metroButton4_Click_1(object sender, EventArgs e)
         {
+            BLL1.Logins.insertCliente(Globais.user, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
             panel11.Visible = true;
             panel11.BringToFront();
         }
