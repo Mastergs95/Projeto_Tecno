@@ -34,18 +34,20 @@ namespace BusinessLogicLayer
                 return dal.executarScalar("select max(id_pedido) from Pedidos", sqlParams);
 
             }
-            static public int insertPedido(string Cliente, string data, string hora, string local)
+            static public int insertPedido(string Cliente, string data, string Distrito, string rua,string Observacoes, string hora,bool Entregue)
             {
                 DAL dal = new DAL();
                 SqlParameter[] sqlParams = new SqlParameter[]{
                
                 new SqlParameter("@Cliente", Cliente),
                 new SqlParameter("@data", data),
+                new SqlParameter("@Distrito", Distrito),
+                new SqlParameter("@rua", rua),
+                new SqlParameter("@Observacoes", Observacoes),
                 new SqlParameter("@hora", hora),
-                  new SqlParameter("@local", local),
-
+                new SqlParameter("@Entregue", Entregue),
             };
-                return dal.executarNonQuery("INSERT into Pedidos (Cliente,data,hora,local) VALUES (@Cliente,@data,@hora,@local)", sqlParams);
+                return dal.executarNonQuery("INSERT into Pedidos (Cliente,data,Distrito,rua,Observacoes,hora,Entregue) VALUES (@Cliente,@data,@Distrito,@rua,@Observacoes,@hora,@Entregue)", sqlParams);
             }
 
             static public int insertReforid(int Id_pedido, int id_refeicoes,int quantidade)
@@ -76,7 +78,23 @@ namespace BusinessLogicLayer
             static public DataTable loadPedido()
             {
                 DAL dal = new DAL();
-                return dal.executarReader("select * from Pedidos where", null);
+                return dal.executarReader("select * from Pedidos where Entregue='false'", null);
+            }
+            static public DataTable loadPedidot()
+            {
+                DAL dal = new DAL();
+                return dal.executarReader("select * from Pedidos where Entregue='true'", null);
+            }
+            static public int updatePedido(int Id,bool Entregue)
+            {
+                DAL dal = new DAL();
+                SqlParameter[] sqlParams = new SqlParameter[]{
+                    new SqlParameter("@Id", Id),
+                new SqlParameter("@Entregue", Entregue),
+                
+
+            };
+                return dal.executarNonQuery("update [Pedidos] set [Entregue]=@Entregue where [Id_pedido]=@Id", sqlParams);
             }
 
             static public DataTable queryPreco(string user, string data)
@@ -97,7 +115,7 @@ namespace BusinessLogicLayer
                    new SqlParameter("@idref", idref),
                 };
               // return dal.executarReader("select Pedidos.Id_pedido, Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco from Pedidos inner join ReforId on Pedidos.id_pedido=@idped  inner join Refeiçoes on ReforId.id_refeicoes = Refeiçoes.Id_refeicao", sqlParams);
-               return dal.executarReader("select Pedidos.Id_pedido, Pedidos.Cliente, Pedidos.data,Pedidos.hora,Pedidos.local,Refeiçoes.Nome,Refeiçoes.preco,Reforid.quantidade from Pedidos inner join ReforId on Pedidos.id_pedido=@idped  inner join Refeiçoes on ReforId.id_refeicoes = Refeiçoes.Id_refeicao where Reforid.id_pedido=@idped", sqlParams);
+               return dal.executarReader("select Pedidos.Id_pedido, Refeiçoes.Nome,Refeiçoes.preco,Reforid.quantidade from Pedidos inner join ReforId on Pedidos.id_pedido=@idped  inner join Refeiçoes on ReforId.id_refeicoes = Refeiçoes.Id_refeicao where Reforid.id_pedido=@idped", sqlParams);
                
 
             }
@@ -126,6 +144,11 @@ namespace BusinessLogicLayer
             {
                 DAL dal = new DAL();
                 return dal.executarReader("select * from Refeiçoes", null);
+            }
+            static public DataTable loadnomeRefeições()
+            {
+                DAL dal = new DAL();
+                return dal.executarReader("select nome from Refeiçoes", null);
             }
             static public DataTable loadPacks()
             {

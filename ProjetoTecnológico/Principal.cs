@@ -59,15 +59,15 @@ namespace ProjetoTecnológico
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
-            toolStripStatusLabel9.Text =  Globais.user;
+            guna2DataGridView7.DataSource = BLL1.Refeicao.loadPedido();
+            guna2DataGridView9.DataSource = BLL1.Refeicao.loadPedidot();
+            toolStripStatusLabel9.Text = Globais.user;
             TransparetBackground(label1);
-           
             guna2DataGridView5.DataSource = BLL1.Refeicao.loadRefeições();
             guna2DataGridView6.DataSource = BLL1.Refeicao.loadRefeições();
             guna2DataGridView4.DataSource = BLL1.Logins.queryLoad();
             guna2DataGridView3.DataSource = BLL1.Logins.queryFunc();
-            guna2DataGridView1.DataSource= BLL1.Refeicao.loadPacks();
+            guna2DataGridView1.DataSource = BLL1.Refeicao.loadPacks();
             guna2DataGridView2.DataSource = BLL1.Refeicao.loadPacks();
 
             if (Globais.admin == true)
@@ -145,29 +145,32 @@ namespace ProjetoTecnológico
 
         private void metroTile1_Click(object sender, EventArgs e)
         {
-            
-         
-                tabControl.Visible = true;
-                tabControl2.Visible = false;
-                tabControl1.Visible = false;
+
+
+            tabControl.Visible = true;
+            tabControl2.Visible = false;
+            tabControl1.Visible = false;
             tabControl3.Visible = false;
+            tabControl4.Visible = false;
             pictureBox1.Visible = false;
-              
-            
-         
+
+
+
 
         }
 
         private void metroTile3_Click(object sender, EventArgs e)
         {
-           
-                tabControl.Visible = false;
-                tabControl1.Visible = true;
-                tabControl2.Visible = false;
-                pictureBox1.Visible = false;
-                
-          
-           
+
+            tabControl.Visible = false;
+            tabControl1.Visible = true;
+            tabControl2.Visible = false;
+            tabControl3.Visible = false;
+            tabControl4.Visible = false;
+            pictureBox1.Visible = false;
+
+
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -181,6 +184,7 @@ namespace ProjetoTecnológico
             tabControl1.Visible = false;
             tabControl2.Visible = true;
             tabControl3.Visible = false;
+            tabControl4.Visible = false;
             pictureBox1.Visible = false;
         }
 
@@ -203,7 +207,7 @@ namespace ProjetoTecnológico
         private void numericUpDown5_Click(object sender, EventArgs e)
         {
             numericUpDown5.ReadOnly = false;
-            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & textBox5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
+            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
             {
                 metroButton2.Enabled = true;
 
@@ -213,8 +217,8 @@ namespace ProjetoTecnológico
         private void textBox5_Click(object sender, EventArgs e)
         {
 
-            textBox5.ReadOnly = false;
-            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & textBox5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
+
+            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
             {
                 metroButton2.Enabled = true;
 
@@ -224,7 +228,7 @@ namespace ProjetoTecnológico
         private void textBox4_Click(object sender, EventArgs e)
         {
             textBox4.ReadOnly = false;
-            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & textBox5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false)
+            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false)
             {
                 metroButton2.Enabled = true;
 
@@ -234,7 +238,7 @@ namespace ProjetoTecnológico
         private void numericUpDown6_Click(object sender, EventArgs e)
         {
             numericUpDown6.ReadOnly = false;
-            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & textBox5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
+            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
             {
                 metroButton2.Enabled = true;
 
@@ -244,7 +248,7 @@ namespace ProjetoTecnológico
         private void numericUpDown7_Click(object sender, EventArgs e)
         {
             numericUpDown7.ReadOnly = false;
-            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & textBox5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
+            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
             {
                 metroButton2.Enabled = true;
 
@@ -254,7 +258,7 @@ namespace ProjetoTecnológico
         private void numericUpDown8_Click(object sender, EventArgs e)
         {
             numericUpDown5.ReadOnly = false;
-            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & textBox5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
+            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
             {
                 metroButton2.Enabled = true;
 
@@ -269,7 +273,7 @@ namespace ProjetoTecnológico
         {
             textBox1.Clear();
             textBox1.ReadOnly = false;
-            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & textBox3.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false  & numericUpDown13.ReadOnly == false)
+            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
             {
                 metroButton1.Enabled = true;
 
@@ -278,9 +282,8 @@ namespace ProjetoTecnológico
 
         private void textBox3_Click(object sender, EventArgs e)
         {
-            textBox3.Clear();
-            textBox3.ReadOnly = false;
-            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & textBox3.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
+
+            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
             {
                 metroButton1.Enabled = true;
 
@@ -293,7 +296,7 @@ namespace ProjetoTecnológico
         {
             numericUpDown1.Value = 0;
             numericUpDown1.ReadOnly = false;
-            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & textBox3.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
+            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
             {
                 metroButton1.Enabled = true;
 
@@ -304,7 +307,7 @@ namespace ProjetoTecnológico
         {
             numericUpDown2.Value = 0;
             numericUpDown2.ReadOnly = false;
-            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & textBox3.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
+            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
             {
                 metroButton1.Enabled = true;
 
@@ -315,7 +318,7 @@ namespace ProjetoTecnológico
         {
             numericUpDown3.Value = 0;
             numericUpDown3.ReadOnly = false;
-            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & textBox3.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
+            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
             {
                 metroButton1.Enabled = true;
 
@@ -326,7 +329,7 @@ namespace ProjetoTecnológico
         {
             numericUpDown4.Value = 0;
             numericUpDown4.ReadOnly = false;
-            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & textBox3.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
+            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
             {
                 metroButton1.Enabled = true;
 
@@ -353,14 +356,14 @@ namespace ProjetoTecnológico
         private void metroButton1_Click_1(object sender, EventArgs e)
         {
             fote = ImageToByteArray(pictureBox7.Image);
-            if (textBox1.Text == "" || textBox3.Text == "" || numericUpDown1.Value.ToString() == "0" || numericUpDown2.Value.ToString() == "0,00" || numericUpDown3.Value.ToString() == "0,00" || numericUpDown4.Value.ToString() == "0,00" || numericUpDown13.Value.ToString() == "0,00")
+            if (textBox1.Text == "" || comboBox3.Text == "" || numericUpDown1.Value.ToString() == "0" || numericUpDown2.Value.ToString() == "0,00" || numericUpDown3.Value.ToString() == "0,00" || numericUpDown4.Value.ToString() == "0,00" || numericUpDown13.Value.ToString() == "0,00")
             {
                 MessageBox.Show("Preencha todos os campos");
             }
-            else if (textBox1.Text != "" && textBox3.Text != "" && numericUpDown1.Value.ToString() != "0" && numericUpDown2.Value.ToString() != "0,00" && numericUpDown3.Value.ToString() != "0,00" && numericUpDown4.Value.ToString() != "0,00" && numericUpDown13.Value.ToString() != "0,00")
+            else if (textBox1.Text != "" && comboBox3.Text != "" && numericUpDown1.Value.ToString() != "0" && numericUpDown2.Value.ToString() != "0,00" && numericUpDown3.Value.ToString() != "0,00" && numericUpDown4.Value.ToString() != "0,00" && numericUpDown13.Value.ToString() != "0,00")
             {
-                
-                BLL1.Refeicao.insertRefeições(textBox1.Text, textBox3.Text, Convert.ToInt32(numericUpDown1.Value), numericUpDown2.Value, numericUpDown3.Value, numericUpDown4.Value,fote,Convert.ToDouble(numericUpDown13.Value));
+
+                BLL1.Refeicao.insertRefeições(textBox1.Text, comboBox3.Text, Convert.ToInt32(numericUpDown1.Value), numericUpDown2.Value, numericUpDown3.Value, numericUpDown4.Value, fote, Convert.ToDouble(numericUpDown13.Value));
                 metroProgressBar1.Visible = true;
                 for (var i = 0; i <= 1000; i++)
                 {
@@ -372,14 +375,14 @@ namespace ProjetoTecnológico
                     if (result == DialogResult.OK)
                     {
                         textBox1.Clear();
-                        textBox3.Clear();
+
                         numericUpDown1.Value = 0;
                         numericUpDown2.Value = 0;
                         numericUpDown3.Value = 0;
                         numericUpDown4.Value = 0;
                         numericUpDown13.Value = 0;
                         textBox1.ReadOnly = true;
-                        textBox3.ReadOnly = true;
+
                         numericUpDown1.ReadOnly = true;
                         numericUpDown2.ReadOnly = true;
                         numericUpDown3.ReadOnly = true;
@@ -408,7 +411,7 @@ namespace ProjetoTecnológico
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-           
+
 
 
         }
@@ -416,15 +419,15 @@ namespace ProjetoTecnológico
         private void metroButton2_Click(object sender, EventArgs e)
         {
             fota = ImageToByteArray(pictureBox8.Image);
-            if (textBox4.Text == "" || textBox5.Text == "" || numericUpDown5.Value.ToString() == "0" || numericUpDown6.Value.ToString() == "0,00" || numericUpDown7.Value.ToString() == "0,00" || numericUpDown8.Value.ToString() == "0,00" || numericUpDown14.Value.ToString() == "0,00")
+            if (textBox4.Text == "" || comboBox2.Text == "" || numericUpDown5.Value.ToString() == "0" || numericUpDown6.Value.ToString() == "0,00" || numericUpDown7.Value.ToString() == "0,00" || numericUpDown8.Value.ToString() == "0,00" || numericUpDown14.Value.ToString() == "0,00")
             {
                 MessageBox.Show("Preencha todos os campos");
             }
 
-            else if (textBox4.Text != "" && textBox5.Text != "" && numericUpDown5.Value.ToString() != "0" && numericUpDown6.Value.ToString() != "0,00" && numericUpDown7.Value.ToString() != "0,00" && numericUpDown8.Value.ToString() != "0,00" && numericUpDown14.Value.ToString() != "0,00")
+            else if (textBox4.Text != "" && comboBox2.Text != "" && numericUpDown5.Value.ToString() != "0" && numericUpDown6.Value.ToString() != "0,00" && numericUpDown7.Value.ToString() != "0,00" && numericUpDown8.Value.ToString() != "0,00" && numericUpDown14.Value.ToString() != "0,00")
             {
                 metroProgressBar2.Visible = true;
-                BLL1.Refeicao.updateRefeições(id, textBox4.Text, textBox5.Text, Convert.ToInt32(numericUpDown5.Value), numericUpDown6.Value, numericUpDown7.Value, numericUpDown8.Value,fota,Convert.ToDouble(numericUpDown14.Value));
+                BLL1.Refeicao.updateRefeições(id, textBox4.Text, comboBox2.Text, Convert.ToInt32(numericUpDown5.Value), numericUpDown6.Value, numericUpDown7.Value, numericUpDown8.Value, fota, Convert.ToDouble(numericUpDown14.Value));
 
                 for (var i = 0; i <= 1000; i++)
                 {
@@ -436,14 +439,14 @@ namespace ProjetoTecnológico
                     if (result == DialogResult.OK)
                     {
                         textBox4.Clear();
-                        textBox5.Clear();
+
                         numericUpDown5.Value = 0;
                         numericUpDown6.Value = 0;
                         numericUpDown7.Value = 0;
                         numericUpDown8.Value = 0;
                         numericUpDown14.Value = 0;
                         textBox4.ReadOnly = true;
-                        textBox5.ReadOnly = true;
+
                         numericUpDown5.ReadOnly = true;
                         numericUpDown6.ReadOnly = true;
                         numericUpDown7.ReadOnly = true;
@@ -482,13 +485,13 @@ namespace ProjetoTecnológico
                     guna2DataGridView5.DataSource = BLL1.Refeicao.loadRefeições();
                     guna2DataGridView6.DataSource = BLL1.Refeicao.loadRefeições();
                     textBox4.Clear();
-                    textBox5.Clear();
+
                     numericUpDown5.Value = 0;
                     numericUpDown6.Value = 0;
                     numericUpDown7.Value = 0;
                     numericUpDown8.Value = 0;
                     textBox4.ReadOnly = true;
-                    textBox5.ReadOnly = true;
+
                     numericUpDown5.ReadOnly = true;
                     numericUpDown6.ReadOnly = true;
                     numericUpDown7.ReadOnly = true;
@@ -510,7 +513,7 @@ namespace ProjetoTecnológico
 
         private void dataGridView2_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-          
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -533,7 +536,7 @@ namespace ProjetoTecnológico
 
         private void dataGridView3_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
         private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -563,7 +566,11 @@ namespace ProjetoTecnológico
             {
                 ad = false;
             }
-            if (textBox11.Text != "")
+            if (textBox13.Text == Globais.user)
+            {
+                MessageBox.Show("Não pode editar este utilizador");
+            }
+            if (textBox11.Text != "" & textBox13.Text != Globais.user)
             {
                 BLL1.Logins.updateLogin(textBox13.Text, password, ad);
                 MessageBox.Show("Conta Atualizada");
@@ -574,6 +581,7 @@ namespace ProjetoTecnológico
 
 
             }
+
 
 
 
@@ -606,7 +614,7 @@ namespace ProjetoTecnológico
         private void dataGridView4_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
-           
+
         }
 
         private void metroButton6_Click(object sender, EventArgs e)
@@ -622,7 +630,7 @@ namespace ProjetoTecnológico
 
             if (textBox10.Text != "" && textBox2.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "")
             {
-                BLL1.Logins.updateFunc(NºFuncionario, textBox10.Text, textBox2.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text,status);
+                BLL1.Logins.updateFunc(NºFuncionario, textBox10.Text, textBox2.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, status);
                 MessageBox.Show("Dados editados com sucesso");
                 guna2DataGridView3.DataSource = BLL1.Logins.queryFunc();
                 textBox10.Clear();
@@ -694,12 +702,12 @@ namespace ProjetoTecnológico
             }
         }
 
-     
+
 
         private void metroButton3_Click_2(object sender, EventArgs e)
         {
-                Form1 f1 = new Form1();
-                f1.Show();
+            Form1 f1 = new Form1();
+            f1.Show();
         }
         public byte[] ImageToByteArray(System.Drawing.Image imageIn)
         {
@@ -722,7 +730,7 @@ namespace ProjetoTecnológico
             }
             foto = ImageToByteArray(pictureBox4.Image);
 
-            
+
         }
 
         private void tabPage5_Click(object sender, EventArgs e)
@@ -737,7 +745,7 @@ namespace ProjetoTecnológico
 
         private void metroButton8_Click(object sender, EventArgs e)
         {
-            if (textBox15.Text == "" || textBox14.Text == "" || textBox12.Text == "" || numericUpDown16.Value==0)
+            if (textBox15.Text == "" || textBox14.Text == "" || textBox12.Text == "" || numericUpDown16.Value == 0)
             {
                 MessageBox.Show("Preencha todos os campos");
             }
@@ -747,21 +755,23 @@ namespace ProjetoTecnológico
                 if (result == DialogResult.OK)
                 {
                     foto = ImageToByteArray(pictureBox4.Image);
-                    int x = BLL1.Refeicao.insertPacks(textBox15.Text, textBox12.Text, textBox14.Text, foto,Convert.ToDouble(numericUpDown16.Value));
+                    int x = BLL1.Refeicao.insertPacks(textBox15.Text, textBox12.Text, textBox14.Text, foto, Convert.ToDouble(numericUpDown16.Value));
+                    guna2DataGridView1.DataSource = BLL1.Refeicao.loadPacks();
+                    guna2DataGridView2.DataSource = BLL1.Refeicao.loadPacks();
                     textBox12.Clear();
                     textBox14.Clear();
                     textBox15.Clear();
                 }
             }
-            
-          
-           
-        
+
+
+
+
         }
 
         private void textBox15_TextChanged(object sender, EventArgs e)
         {
-            if (textBox15.Text!="" && textBox14.Text != "" && textBox12.Text != "" && numericUpDown16.Value != 0)
+            if (textBox15.Text != "" && textBox14.Text != "" && textBox12.Text != "" && numericUpDown16.Value != 0)
             {
                 metroButton8.Enabled = true;
             }
@@ -804,7 +814,7 @@ namespace ProjetoTecnológico
             if (result == DialogResult.OK)
             {
                 fotos = ImageToByteArray(pictureBox5.Image);
-                BLL1.Refeicao.updatePacks(id_pack, textBox20.Text, textBox16.Text, textBox19.Text, fotos,Convert.ToDouble(numericUpDown17.Value));
+                BLL1.Refeicao.updatePacks(id_pack, textBox20.Text, textBox16.Text, textBox19.Text, fotos, Convert.ToDouble(numericUpDown17.Value));
                 textBox16.Clear();
                 textBox20.Clear();
                 textBox19.Clear();
@@ -813,7 +823,7 @@ namespace ProjetoTecnológico
                 guna2DataGridView2.DataSource = BLL1.Refeicao.loadPacks();
 
             }
-            if (textBox16.Text == "" || textBox20.Text == "" || textBox19.Text == "" || numericUpDown17.Value==0)
+            if (textBox16.Text == "" || textBox20.Text == "" || textBox19.Text == "" || numericUpDown17.Value == 0)
             {
                 MessageBox.Show("Preencha todos os campos");
             }
@@ -822,7 +832,7 @@ namespace ProjetoTecnológico
 
         private void dataGridView5_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-          
+
         }
         public Image byteArrayToImage(byte[] byteArrayIn)
         {
@@ -846,7 +856,7 @@ namespace ProjetoTecnológico
                 textBox19.ReadOnly = false;
                 textBox20.ReadOnly = false;
             }
-            
+
             catch (Exception erro)
             {
                 if (guna2DataGridView1.RowCount == 0)
@@ -872,7 +882,7 @@ namespace ProjetoTecnológico
 
         private void textBox20_TextChanged(object sender, EventArgs e)
         {
-            if (textBox19.Text != "" && textBox20.Text != "" && textBox16.Text != "" && numericUpDown17.Value!=0)
+            if (textBox19.Text != "" && textBox20.Text != "" && textBox16.Text != "" && numericUpDown17.Value != 0)
             {
                 metroButton9.Enabled = true;
             }
@@ -909,7 +919,7 @@ namespace ProjetoTecnológico
 
         private void dataGridView6_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+
         }
 
         private void metroButton11_Click(object sender, EventArgs e)
@@ -1076,7 +1086,7 @@ namespace ProjetoTecnológico
                 if (id != 0)
                 {
                     textBox4.Text = guna2DataGridView5.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    textBox5.Text = guna2DataGridView5.Rows[e.RowIndex].Cells[2].Value.ToString();
+                    comboBox2.Text = guna2DataGridView5.Rows[e.RowIndex].Cells[2].Value.ToString();
                     numericUpDown5.Value = Convert.ToDecimal(guna2DataGridView5.Rows[e.RowIndex].Cells[3].Value);
                     numericUpDown6.Value = Convert.ToDecimal(guna2DataGridView5.Rows[e.RowIndex].Cells[4].Value);
                     numericUpDown7.Value = Convert.ToDecimal(guna2DataGridView5.Rows[e.RowIndex].Cells[5].Value);
@@ -1159,9 +1169,9 @@ namespace ProjetoTecnológico
 
         private void numericUpDown13_Click(object sender, EventArgs e)
         {
-            numericUpDown13.Value=0;
+            numericUpDown13.Value = 0;
             numericUpDown13.ReadOnly = false;
-            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & textBox3.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
+            if (textBox1.ReadOnly == false & numericUpDown1.ReadOnly == false & numericUpDown2.ReadOnly == false & numericUpDown3.ReadOnly == false & numericUpDown4.ReadOnly == false & numericUpDown13.ReadOnly == false)
             {
                 metroButton1.Enabled = true;
 
@@ -1171,7 +1181,7 @@ namespace ProjetoTecnológico
         private void numericUpDown14_Click(object sender, EventArgs e)
         {
             numericUpDown14.ReadOnly = false;
-            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & textBox5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
+            if (textBox4.ReadOnly == false & numericUpDown5.ReadOnly == false & numericUpDown6.ReadOnly == false & numericUpDown7.ReadOnly == false & numericUpDown8.ReadOnly == false & numericUpDown14.ReadOnly == false)
             {
                 metroButton2.Enabled = true;
 
@@ -1180,7 +1190,7 @@ namespace ProjetoTecnológico
 
         private void numericUpDown16_ValueChanged(object sender, EventArgs e)
         {
-            if (textBox15.Text != "" && textBox14.Text != "" && textBox12.Text != "" && numericUpDown16.Value!=0)
+            if (textBox15.Text != "" && textBox14.Text != "" && textBox12.Text != "" && numericUpDown16.Value != 0)
             {
                 metroButton8.Enabled = true;
             }
@@ -1216,7 +1226,7 @@ namespace ProjetoTecnológico
         {
             tabControl.Visible = false;
             tabControl1.Visible = false;
-            tabControl2.Visible =false;
+            tabControl2.Visible = false;
             tabControl3.Visible = true;
             pictureBox1.Visible = false;
         }
@@ -1229,6 +1239,44 @@ namespace ProjetoTecnológico
         private void tabPage6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroTile2_Click(object sender, EventArgs e)
+        {
+            tabControl.Visible = false;
+            tabControl1.Visible = false;
+            tabControl2.Visible = false;
+            tabControl3.Visible = false;
+            tabControl4.Visible = true;
+            pictureBox1.Visible = false;
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox2.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                textBox2.Text = textBox2.Text.Remove(textBox2.Text.Length - 1);
+            }
+        }
+
+        private void metroButton14_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in guna2DataGridView7.Rows)
+            {
+                int idp=0;
+                bool et=false;
+                int pos = row.Index;
+                if (guna2DataGridView7.Rows[pos].Cells[6].Selected == true)
+                    {
+                    idp = (int)guna2DataGridView7.Rows[pos].Cells[0].Value;
+                    et = Convert.ToBoolean(guna2DataGridView7.Rows[pos].Cells[7].Value);
+
+                }
+                BLL1.Refeicao.updatePedido(idp, et);
+                guna2DataGridView7.DataSource = BLL1.Refeicao.loadPedido();
+                guna2DataGridView9.DataSource = BLL1.Refeicao.loadPedidot();
+            }
         }
     }
 }

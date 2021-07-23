@@ -144,6 +144,10 @@ namespace ProjetoTecnológico
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.printDocument2 = new System.Drawing.Printing.PrintDocument();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.metroLabel6 = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -686,6 +690,7 @@ namespace ProjetoTecnológico
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.BackgroundImage = global::ProjetoTecnológico.Properties.Resources.background;
             this.panel10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.textBox2);
             this.panel10.Controls.Add(this.label21);
             this.panel10.Controls.Add(this.label18);
@@ -702,7 +707,6 @@ namespace ProjetoTecnológico
             this.panel10.Controls.Add(this.textBox1);
             this.panel10.Controls.Add(this.label11);
             this.panel10.Controls.Add(this.guna2DataGridView3);
-            this.panel10.Controls.Add(this.panel12);
             this.panel10.Controls.Add(this.panel11);
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
@@ -922,6 +926,10 @@ namespace ProjetoTecnológico
             // 
             // panel12
             // 
+            this.panel12.Controls.Add(this.textBox8);
+            this.panel12.Controls.Add(this.metroLabel6);
+            this.panel12.Controls.Add(this.textBox6);
+            this.panel12.Controls.Add(this.metroLabel5);
             this.panel12.Controls.Add(this.dateTimePicker2);
             this.panel12.Controls.Add(this.dateTimePicker1);
             this.panel12.Controls.Add(this.textBox7);
@@ -941,7 +949,7 @@ namespace ProjetoTecnológico
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker2.Location = new System.Drawing.Point(226, 94);
+            this.dateTimePicker2.Location = new System.Drawing.Point(226, 268);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(138, 20);
             this.dateTimePicker2.TabIndex = 30;
@@ -949,21 +957,21 @@ namespace ProjetoTecnológico
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(226, 206);
+            this.dateTimePicker1.Location = new System.Drawing.Point(224, 74);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(138, 20);
             this.dateTimePicker1.TabIndex = 29;
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(226, 147);
+            this.textBox7.Location = new System.Drawing.Point(224, 156);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(138, 20);
             this.textBox7.TabIndex = 27;
             // 
             // metroLabel8
             // 
-            this.metroLabel8.Location = new System.Drawing.Point(101, 206);
+            this.metroLabel8.Location = new System.Drawing.Point(101, 73);
             this.metroLabel8.Name = "metroLabel8";
             this.metroLabel8.Size = new System.Drawing.Size(93, 23);
             this.metroLabel8.TabIndex = 25;
@@ -972,11 +980,11 @@ namespace ProjetoTecnológico
             // 
             // metroLabel9
             // 
-            this.metroLabel9.Location = new System.Drawing.Point(101, 147);
+            this.metroLabel9.Location = new System.Drawing.Point(101, 156);
             this.metroLabel9.Name = "metroLabel9";
             this.metroLabel9.Size = new System.Drawing.Size(93, 23);
             this.metroLabel9.TabIndex = 24;
-            this.metroLabel9.Text = "Local";
+            this.metroLabel9.Text = "Rua";
             this.metroLabel9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // label20
@@ -1017,7 +1025,7 @@ namespace ProjetoTecnológico
             // 
             // metroLabel10
             // 
-            this.metroLabel10.Location = new System.Drawing.Point(64, 91);
+            this.metroLabel10.Location = new System.Drawing.Point(86, 268);
             this.metroLabel10.Name = "metroLabel10";
             this.metroLabel10.Size = new System.Drawing.Size(110, 23);
             this.metroLabel10.TabIndex = 18;
@@ -1579,6 +1587,40 @@ namespace ProjetoTecnológico
             this.pictureBox11.TabStop = false;
             this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(224, 113);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(138, 20);
+            this.textBox6.TabIndex = 32;
+            // 
+            // metroLabel5
+            // 
+            this.metroLabel5.Location = new System.Drawing.Point(101, 116);
+            this.metroLabel5.Name = "metroLabel5";
+            this.metroLabel5.Size = new System.Drawing.Size(93, 23);
+            this.metroLabel5.TabIndex = 31;
+            this.metroLabel5.Text = "Distrito";
+            this.metroLabel5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(224, 203);
+            this.textBox8.Multiline = true;
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox8.Size = new System.Drawing.Size(138, 37);
+            this.textBox8.TabIndex = 34;
+            // 
+            // metroLabel6
+            // 
+            this.metroLabel6.Location = new System.Drawing.Point(101, 203);
+            this.metroLabel6.Name = "metroLabel6";
+            this.metroLabel6.Size = new System.Drawing.Size(93, 23);
+            this.metroLabel6.TabIndex = 33;
+            this.metroLabel6.Text = "Observações";
+            this.metroLabel6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // Refeições
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1749,5 +1791,9 @@ namespace ProjetoTecnológico
         private System.Windows.Forms.DataGridViewImageColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.TextBox textBox8;
+        private MetroFramework.Controls.MetroLabel metroLabel6;
+        private System.Windows.Forms.TextBox textBox6;
+        private MetroFramework.Controls.MetroLabel metroLabel5;
     }
 }

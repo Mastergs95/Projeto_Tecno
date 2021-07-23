@@ -1093,9 +1093,9 @@ namespace ProjetoTecnológico
         private void button8_Click(object sender, EventArgs e)
         {
             
-            if (textBox7.Text == "")
+            if (textBox7.Text == "" ||  textBox6.Text == "")
             {
-                MessageBox.Show("Por favor insira um local para entrega");
+                MessageBox.Show("Por favor preencha todos os campos");
             }
             else
             {
@@ -1113,7 +1113,7 @@ namespace ProjetoTecnológico
                 }
                 
                 string dat = dateTimePicker2.Value.ToShortDateString();
-                BLL1.Refeicao.insertPedido("teste", dat, hrt, textBox7.Text);
+                BLL1.Refeicao.insertPedido(Globais.user, dat,textBox6.Text,textBox7.Text,textBox8.Text, hrt,false);
                 //
                 Globais.idpedido = (int)BLL1.Refeicao.querymaxid();
 
@@ -1249,7 +1249,7 @@ namespace ProjetoTecnológico
 
         private void metroButton4_Click_1(object sender, EventArgs e)
         {
-            BLL1.Logins.insertCliente(Globais.user, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
+            //BLL1.Logins.insertCliente(Globais.user, textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text);
             panel11.Visible = true;
             panel11.BringToFront();
         }
