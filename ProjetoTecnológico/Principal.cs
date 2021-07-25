@@ -1278,6 +1278,31 @@ namespace ProjetoTecnológico
                 guna2DataGridView9.DataSource = BLL1.Refeicao.loadPedidot();
             }
         }
+
+        private void metroButton15_Click(object sender, EventArgs e)
+        {
+            if (comboBox1.Text == "Nº Refeições")
+            {
+                guna2DataGridView8.DataSource = BLL1.Refeicao.Nrefeicoes();
+            }
+            if (comboBox1.Text == "Nº Packs")
+            {
+                guna2DataGridView8.DataSource = BLL1.Refeicao.Npacks();
+            }
+            if (comboBox1.Text == "Total de Pedidos")
+            {
+                guna2DataGridView8.DataSource = BLL1.Refeicao.Npedidos();
+            }
+            
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text != "")
+            {
+                metroButton15.Enabled = true;
+            }
+        }
     }
 }
 

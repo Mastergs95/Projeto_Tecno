@@ -92,7 +92,7 @@ namespace ProjetoTecnológico
                 label3.Visible = true;
                 label4.Visible = true;
             }
-            if (p == cfpassword & dt.Rows.Count == 0 & textBox4.Text!="" & textBox5.Text != "" & textBox6.Text != "" & textBox7.Text != "" & textBox8.Text != "" & textBox9.Text != "" & usuario == textBox9.Text)
+            if (p == cfpassword && dt.Rows.Count == 0 && textBox4.Text!="" && textBox5.Text != "" && textBox6.Text != "" && textBox7.Text != "" && textBox8.Text != "" && textBox9.Text != "" && usuario == textBox9.Text)
             {
                 BLL1.Logins.insertFuncionario(textBox4.Text, textBox5.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text);
                 MessageBox.Show("Registado com sucesso!");
@@ -109,10 +109,7 @@ namespace ProjetoTecnológico
                 label4.Visible = false;
                 label4.Visible = false;
             }
-            else
-            {
-                MessageBox.Show("Por favor preencha todos os campos!");
-            }
+          
          
 
 

@@ -74,6 +74,22 @@ namespace BusinessLogicLayer
             };
                 return dal.executarNonQuery("INSERT into packs (nome,prato,sobremesa,foto,preco) VALUES (@nome,@prato,@sobremesa,@foto,@preco)", sqlParams);
             }
+            static public DataTable Nrefeicoes()
+            {
+                DAL dal = new DAL();
+                return dal.executarReader("select count(refeiçoes.nome) as 'NºRefeições' from Refeiçoes", null);
+            }
+            static public DataTable Npacks()
+            {
+                DAL dal = new DAL();
+                return dal.executarReader("select count( packs.nome) as 'NºPacks' from packs", null);
+            }
+
+            static public DataTable Npedidos()
+            {
+                DAL dal = new DAL();
+                return dal.executarReader("select count(Id_pedido)as 'NºPedidos' from Pedidos", null);
+            }
 
             static public DataTable loadPedido()
             {

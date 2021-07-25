@@ -38,7 +38,7 @@ namespace ProjetoTecnológico
         int px = 280;
         int py = 120;
         //packs
-        int q = 185;
+        int q = 150;
         int w = 280;
         int a = 140;
         int s = 120;
@@ -569,7 +569,7 @@ namespace ProjetoTecnológico
                 guna2DataGridView1.Rows.Add(10);
 
                 //guna2DataGridView1.Rows[j].Height = 60;
-                int l = 373 + 74;
+                
                 this.Controls.Add(panel5);
                 panel5.Location = new Point(500, 200);
                 panel1.AutoScroll = true;
@@ -669,9 +669,9 @@ namespace ProjetoTecnológico
                 guna2DataGridView2.Rows.Add(10);
 
                 //guna2DataGridView1.Rows[j].Height = 60;
-                int l = 373 + 74;
+                
                 this.Controls.Add(panel7);
-                // panel7.Location = new Point(500, 200);
+               // panel7.Location = new Point(500, 200);
                 panel1.AutoScroll = true;
                 panel8.Visible = false;
                 toolStripStatusLabel9.Text = Globais.user;
@@ -709,7 +709,7 @@ namespace ProjetoTecnológico
                     label.Location = new Point(q, w);
                     label.Name = "l" + l;
                     label.Text = row["nome"].ToString();
-                    label.Size = new Size(100, 30);
+                    label.Size = new Size(200, 50);
                     label.BringToFront();
                     label.Font = new Font("Century Gothic", 12);
                     panel7.Controls.Add(label);
@@ -721,18 +721,18 @@ namespace ProjetoTecnológico
                     labell.Location = new Point(xq, xw);
                     labell.Name = "ls" + l;
                     labell.Text = row["preco"].ToString() + "€";
-                    labell.Size = new Size(100, 30);
+                    labell.Size = new Size(100, 50);
                     labell.BringToFront();
                     labell.Font = new Font("Century Gothic", 12);
                     panel7.Controls.Add(labell);
                     this.Controls.Add(panel7);
 
                     q += 300;
-                    w += 300;
+                    a += 300;
                     xq += 300;
                     if (l % 3 == 0)
                     {
-                        q = 185;
+                        q = 150;
                         w += 250;
                         a = 140;
                         s += 250;
@@ -1093,9 +1093,11 @@ namespace ProjetoTecnológico
         private void button8_Click(object sender, EventArgs e)
         {
             
-            if (textBox7.Text == "" ||  textBox6.Text == "")
+            string datehj = DateTime.Now.ToString();
+            MessageBox.Show(datehj + dateTimePicker1.Value.ToShortDateString());
+            if (textBox7.Text == "" || textBox6.Text == ""  || Convert.ToDateTime(dateTimePicker1.Value.ToString()) < Convert.ToDateTime(datehj) || Convert.ToDateTime(dateTimePicker1.Value.ToString()) == Convert.ToDateTime(datehj))
             {
-                MessageBox.Show("Por favor preencha todos os campos");
+                MessageBox.Show("Por favor preencha todos os campos ou insira uma data válida");
             }
             else
             {
